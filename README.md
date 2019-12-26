@@ -2,6 +2,9 @@
 
 This extension adds syntax highlighting for Zemax ZPL macros (http://zemax.com/)
 
+## Features
+### Syntax highlight
+![syntax](images/syntax.png)
 
 ## Changelog
 Read the CHANGLELOG to know what has changed over the last few versions of this extension.

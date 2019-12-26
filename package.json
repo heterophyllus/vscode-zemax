@@ -9,6 +9,7 @@
     },
     "license": "MIT",
     "publisher": "heterophyllus",
+    "icon": "images/icon.jpg",
     "engines": {
         "vscode": "^1.41.0"
     },
