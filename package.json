@@ -19,6 +19,7 @@
     "keywords": [
         "Zemax",
         "OpticStudio",
+        "ZOS",
         "ZPL"
     ],
     "contributes": {
