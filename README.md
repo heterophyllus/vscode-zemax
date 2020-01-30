@@ -1,6 +1,6 @@
 # Zemax OpticStudio ZPL language support for Visual Studio Code
 
-This extension adds syntax highlighting for [Zemax OpticStudio](https://www.zemax.com/products/opticstudio) ZPL macros.
+This extension adds syntax highlighting and snippets for [Zemax OpticStudio](https://www.zemax.com/products/opticstudio) ZPL macros.
 
 ## Screenshot
 ![syntax](images/syntax.png)

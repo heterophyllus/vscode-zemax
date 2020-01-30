@@ -161,7 +161,7 @@
 				},
 				{
 					"comment": "type for PLOT",
-					"match": "\\b((?i)PLOT)\\s+((?i)NEW|TITLE|TITLE[XY]|BANNER|WINASPECT|COMM[1-6]|RANGE[XY]|CHECK|TICK|FORMAT[XY]|DATA|LINE|LABEL)\\b",
+					"match": "\\b((?i)PLOT)\\s+((?i)NEW|TITLE|TITLE|BANNER|WINASPECT|COMM|RANGE[XY]|CHECK|TICK|FORMAT[XY]|DATA|LINE|LABEL)\\b",
 					"captures": {
 						"1":{
 							"name": "keyword.language.zemax"
@@ -173,7 +173,7 @@
 				},
 				{
 					"comment": "type for PLOT2D",
-					"match": "\\b((?i)PLOT2D)\\s+((?i)NEW|TITLE|COMM[1-5]|RANGE|ASPECT|WINASPECT|DATA|ACTIVECURSOR|DISPLAYTYPE|CONTOURINTERVAL|SURFACESCALE|LOGPLOT|HIDEADDRESS|CONFIG|GO)\\b",
+					"match": "\\b((?i)PLOT2D)\\s+((?i)NEW|TITLE|COMM|RANGE|ASPECT|WINASPECT|DATA|ACTIVECURSOR|DISPLAYTYPE|CONTOURINTERVAL|SURFACESCALE|LOGPLOT|HIDEADDRESS|CONFIG)\\b",
 					"captures": {
 						"1":{
 							"name": "keyword.language.zemax"

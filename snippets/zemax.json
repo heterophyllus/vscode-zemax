@@ -216,7 +216,7 @@
     },
     "GNUM":{
         "prefix":"GNUM",
-        "body":"GNUM(${str})",
+        "body":"GNUM(${1:str})",
         "description":"Glass number in the catalog"
     },
     "GPAR":{
@@ -661,7 +661,7 @@
     },
     "WAVL":{
         "prefix":"WAVL",
-        "body":"WAVL(${wav})",
+        "body":"WAVL(${1:wav})",
         "description":"Wavelength in micrometer"
     },
     "WINL":{
@@ -704,27 +704,27 @@
 
     "$BUFFER":{
         "prefix":"$BUFFER",
-        "body":"$BUFFER()",
+        "body":"\\$BUFFER()",
         "description":"Get string from buffer"
     },
     "$CALLSTR":{
         "prefix":"$CALLSTR",
-        "body":"$CALLSTR(${1:i})",
+        "body":"\\$CALLSTR(${1:i})",
         "description":"Get string at specified index of the buffer"
     },
     "$COAT":{
         "prefix":"$COAT",
-        "body":"$COAT(${1:i})",
+        "body":"\\$COAT(${1:i})",
         "description":"Coating name"
     },
     "$COATINGPATH":{
         "prefix":"$COATINGPATH",
-        "body":"$COATINGPATH()",
+        "body":"\\$COATINGPATH()",
         "description":"Coating file path"
     },
     "$COMMENT":{
         "prefix":"$COMMENT",
-        "body":"$COMMENT(${1:i})",
+        "body":"\\$COMMENT(${1:i})",
         "description":"Comment"
     },
     "DATAPATH":{
@@ -734,42 +734,42 @@
     },
     "$DATE":{
         "prefix":"$DATE",
-        "body":"$DATE()",
+        "body":"\\$DATE()",
         "description":"Current date and time"
     },
     "$EXTENSIONPATH":{
         "prefix":"$EXTENSIONPATH",
-        "body":"$EXTENSIONPATH()",
+        "body":"\\$EXTENSIONPATH()",
         "description":"Zemax extension path"
     },
     "$FILENAME":{
         "prefix":"$FILENAME",
-        "body":"$FILENAME()",
+        "body":"\\$FILENAME()",
         "description":"Current lens file name"
     },
     "$FILEPATH":{
         "prefix":"$FILEPATH",
-        "body":"$FILEPATH()",
+        "body":"\\$FILEPATH()",
         "description":"Current lens file (full path)"
     },
     "$GETSTRING":{
         "prefix":"$GETSTRING",
-        "body":"$GETSTRING(${1:str},${2:n})",
+        "body":"\\$GETSTRING(${1:str},${2:n})",
         "description":"Get substring of string separated with space"
     },
     "$GETSTRINGC":{
         "prefix":"$GETSTRINGC",
-        "body":"$GETSTRINGC(${1:str},${2:n})",
+        "body":"\\$GETSTRINGC(${1:str},${2:n})",
         "description":"Get substring of string separated with comma"
     },
     "$GLASS":{
         "prefix":"$GLASS",
-        "body":"$GLASS(${1:i})",
+        "body":"\\$GLASS(${1:i})",
         "description":"Glass name"
     },
     "$GLASSCATALOG":{
         "prefix":"$GLASSCATALOG",
-        "body":"$GLASSCATALOG(${1:i})",
+        "body":"\\$GLASSCATALOG(${1:i})",
         "description":"Glass catalog"
     },
     "GLASSPATH":{
@@ -779,12 +779,12 @@
     },
     "$LEFTSTRING":{
         "prefix":"$LEFTSTRING",
-        "body":"$LEFTSTRING(${1:A},${2:n})",
+        "body":"\\$LEFTSTRING(${1:A},${2:n})",
         "description":"Left n characters"
     },
     "$LENSNAME":{
         "prefix":"$LENSNAME",
-        "body":"$LENSNAME()",
+        "body":"\\$LENSNAME()",
         "description":"Lens title"
     },
     "MACROPATH":{
@@ -794,22 +794,22 @@
     },
     "$NOTE":{
         "prefix":"$NOTE",
-        "body":"$NOTE(${1:line})",
+        "body":"\\$NOTE(${1:line})",
         "description":"Note defined on General System Data dialog"
     },
     "$OBJECTPATH":{
         "prefix":"$OBJECTPATH",
-        "body":"$OBJECTPATH()",
+        "body":"\\$OBJECTPATH()",
         "description":"NSC object path"
     },
     "$PATHNAME":{
         "prefix":"$PATHNAME",
-        "body":"$PATHNAME()",
+        "body":"\\$PATHNAME()",
         "description":"Current lens file path"
     },
     "$PROGRAMPATH":{
         "prefix":"$PROGRAMPATH",
-        "body":"$PROGRAMPATH()",
+        "body":"\\$PROGRAMPATH()",
         "description":"Program file path"
     },
     "QUOTE":{
@@ -819,32 +819,32 @@
     },
     "$RIGHTSTRING":{
         "prefix":"$RIGHTSTRING",
-        "body":"$RIGHTSTRING(${1:A},${2:n})",
+        "body":"\\$RIGHTSTRING(${1:A},${2:n})",
         "description":"Right n characters"
     },
     "$STR":{
         "prefix":"$STR",
-        "body":"$STR(${1:expr})",
+        "body":"\\$STR(${1:expr})",
         "description":"String in a format"
     },
     "$TEMPFILENAME":{
         "prefix":"$TEMPFILENAME",
-        "body":"$TEMPFILENAME()",
+        "body":"\\$TEMPFILENAME()",
         "description":"Temporary file path (full)"
     },
     "$TOLCOMMENT":{
         "prefix":"$TOLCOMMENT",
-        "body":"$TOLCOMMENT(${1:operand})",
+        "body":"\\$TOLCOMMENT(${1:operand})",
         "description":"Comment of the tolerance operand"
     },
     "$TOLOPERAND":{
         "prefix":"$TOLOPERAND",
-        "body":"$TOLOPERAND(${1:operand})",
+        "body":"\\$TOLOPERAND(${1:operand})",
         "description":"Operand name of the tolerance operand"
     },
     "$UNITS":{
         "prefix":"$UNITS",
-        "body":"$UNITS()",
+        "body":"\\$UNITS()",
         "description":"Current lens unit"
     },
 
@@ -923,7 +923,7 @@
     },
     "DELETEMFO":{
         "prefix":"DELETEMFO",
-        "body":"DELETEMFO ${1:row/all}",
+        "body":"DELETEMFO",
         "description":"Delete operand on merit function editor"
     },
     "DELETEOBJECT":{
@@ -1068,7 +1068,7 @@
     },
     "IMASHOW":{
         "prefix":"IMASHOW",
-        "body":"IMASHOW ${1:filename.ima}",
+        "body":"IMASHOW ${1:file}",
         "description":"Display IMA/BIM file on the viewer window"
     },
     "IMASUM":{
@@ -1348,7 +1348,7 @@
     },
     "SAVETOLERANCE":{
         "prefix":"SAVETOLERANCE",
-        "body":"SAVETOLERANCE ${file}",
+        "body":"SAVETOLERANCE ${1:file}",
         "description":""
     },
     "SAVEWINDOW":{
@@ -1552,5 +1552,6 @@
         "description":"Connect two ZRD"
     }
     
+
 
 }
