@@ -846,6 +846,711 @@
         "prefix":"$UNITS",
         "body":"$UNITS()",
         "description":"Current lens unit"
+    },
+
+
+
+
+    "BEEP":{
+        "prefix":"BEEP",
+        "body":"BEEP",
+        "description":"Beeping"
+    },
+    "CALLMACRO":{
+        "prefix":"CALLMACRO",
+        "body":"CALLMACRO ${1:filename}",
+        "description":"Call other macro"
+    },
+    "CALLSETDBL":{
+        "prefix":"CALLSETDBL",
+        "body":"CALLSETDBL ${1:index}, ${2:value}",
+        "description":"Set double precision floating point number to the buffer"
+    },
+    "CALLSETSTR":{
+        "prefix":"CALLSETSTR",
+        "body":"CALLSETSTR ${1:index}, ${2:text}",
+        "description":"Set string to the buffer"
+    },
+    "CLOSE":{
+        "prefix":"CLOSE",
+        "body":"CLOSE",
+        "description":"Close the file"
+    },
+    "CLOSEWINDOW":{
+        "prefix":"CLOSEWINDOW",
+        "body":"CLOSEWINDOW ${1:n}",
+        "description":"Close the window, or Set quiet mode"
+    },
+    "COLOR":{
+        "prefix":"COLOR",
+        "body":"COLOR ${1:n}",
+        "description":"Set color to the current pen"
+    },
+    "COMMAND":{
+        "prefix":"COMMAND",
+        "body":"COMMAND ${1:exe}, ${2:arg}",
+        "description":"Run shell command"
+    },
+    "COPYFILE":{
+        "prefix":"COPYFILE",
+        "body":"COPYFILE ${1:src}, ${2:dst}",
+        "description":"Copy file"
+    },
+    "DEFAULTMERIT":{
+        "prefix":"DEFAULTMERIT",
+        "body":"DEFAULTMERIT ${1:type}, ${2:data}, ${3:reference}, ${4:method}, ${5:rings}, ${6:arms}, ${7:grid}, ${8:delete}, ${9:axial}, ${10:lateral}, ${11:start}, ${12:xweight}, ${13:oweight}",
+        "description":"Generate default merit function"
+    },
+    "DELETE":{
+        "prefix":"DELETE",
+        "body":"DELETE ${1:n}",
+        "description":"Delete the surface"
+    },
+    "DELETECONFIG":{
+        "prefix":"DELETECONFIG",
+        "body":"DELETECONFIG ${1:conf}",
+        "description":"Delete configuration from multi-configuration editor"
+    },
+    "DELETEFILE":{
+        "prefix":"DELETEFILE",
+        "body":"DELETEFILE ${1:filename}",
+        "description":"Delete file"
+    },
+    "DELETEMCO":{
+        "prefix":"DELETEMCO",
+        "body":"DELETEMCO ${1:row}",
+        "description":"Delete operand on multi-configuration editor"
+    },
+    "DELETEMFO":{
+        "prefix":"DELETEMFO",
+        "body":"DELETEMFO ${1:row/all}",
+        "description":"Delete operand on merit function editor"
+    },
+    "DELETEOBJECT":{
+        "prefix":"DELETEOBJECT",
+        "body":"DELETEOBJECT ${1:surf}, ${2:obj}",
+        "description":"Delete NSC object"
+    },
+    "DELETETOL":{
+        "prefix":"DELETETOL",
+        "body":"DELETETOL ${1:row}",
+        "description":"Delete operand on tolerance analysis editor"
+    },
+    "EXPORTBMP":{
+        "prefix":"EXPORTBMP",
+        "body":"EXPORTBMP ${1:win}, ${2:filename}, ${3:delay}",
+        "description":"Export a graphic window to BMP file"
+    },
+    "EXPORTCAD":{
+        "prefix":"EXPORTCAD",
+        "body":"EXPORTCAD ${1:filename}",
+        "description":"Export lens data to CAD file"
+    },
+    "EXPORTJPG":{
+        "prefix":"EXPORTJPG",
+        "body":"EXPORTJPG ${1:win}, ${2:filename}, ${3:delay}",
+        "description":"Export a graphic window to JPG file"
+    },
+    "EXPORTWMF":{
+        "prefix":"EXPORTWMF",
+        "body":"EXPORTWMF ${1:win}, ${2:filename}",
+        "description":"Export a graphic window to WMF file"
+    },
+    "FINDFILE":{
+        "prefix":"FINDFILE",
+        "body":"FINDFILE ${1:temp}, ${2:filter}",
+        "description":"Find files"
+    },
+    "FORMAT":{
+        "prefix":"FORMAT",
+        "body":"FORMAT",
+        "description":"Set output format"
+    },
+    "GDATE":{
+        "prefix":"GDATE",
+        "body":"GDATE",
+        "description":"Insert the date under the lens name"
+    },
+    "GETEXTRADATA":{
+        "prefix":"GETEXTRADATA",
+        "body":"GETEXTRADATA ${1:vec}, ${2:surf}",
+        "description":"Get extra data from the additional editor"
+    },
+    "GETGLASSDATA":{
+        "prefix":"GETGLASSDATA",
+        "body":"GETGLASSDATA ${1:vec}, ${2:glass}",
+        "description":"Get glass data in the current catalog"
+    },
+    "GETLSF":{
+        "prefix":"GETLSF",
+        "body":"GETLSF ${1:wave}, ${2:field}, ${3:sampling}, ${4:vector}, ${5:maxradius}, ${6:polarization}",
+        "description":"Get line spread function"
+    },
+    "GETMTF":{
+        "prefix":"GETMTF",
+        "body":"GETMTF ${1:freq}, ${2:wave}, ${3:field}, ${4:sampling}, ${5:vector}, ${6:type}",
+        "description":"Get Modular Transfer Function"
+    },
+    "GETPSF":{
+        "prefix":"GETPSF",
+        "body":"GETPSF ${1:wave}, ${2:field}, ${3:sampling}, ${4:vector}, ${5:unnormalized}, ${6:phaseflag}, ${7:imagedelta}",
+        "description":"Get Point Spread Function"
+    },
+    "GETSYSTEMDATA":{
+        "prefix":"GETSYSTEMDATA",
+        "body":"GETSYSTEMDATA ${1:vec}",
+        "description":"Get system data"
+    },
+    "GETTEXTFILE":{
+        "prefix":"GETTEXTFILE",
+        "body":"GETTEXTFILE ${1:textfile}, ${2:type}, ${3:settingsfile}, ${4:flag}",
+        "description":"Generate text file from the window"
+    },
+    "GETVARDATA":{
+        "prefix":"GETVARDATA",
+        "body":"GETVARDATA ${1:vector}",
+        "description":"Get all variable data"
+    },
+    "GETZERNIKE":{
+        "prefix":"GETZERNIKE",
+        "body":"GETZERNIKE ${1:maxorder}, ${2:wave}, ${3:field}, ${4:sampling}, ${5:vector}, ${6:zerntype}, ${7:epsilon}, ${8:reference}",
+        "description":"Get Zernike polynomial data"
+    },
+    "GLENSNAME":{
+        "prefix":"GLENSNAME",
+        "body":"GLENSNAME",
+        "description":"Insert the current lens name on the left top of the textbox"
+    },
+    "GLOBALTOLOCAL":{
+        "prefix":"GLOBALTOLOCAL",
+        "body":"GLOBALTOLOCAL ${1:surf1}, ${2:surf2}, ${3:direction}",
+        "description":""
+    },
+    "GRAPHICS":{
+        "prefix":"GRAPHICS",
+        "body":"GRAPHICS",
+        "description":"Generate new graphic scheme"
+    },
+    "GTEXT":{
+        "prefix":"GTEXT",
+        "body":"GTEXT ${1:x}, ${2:y}, ${3:angle}, ${4:usertext}",
+        "description":"Put user defined text to the graphics"
+    },
+    "GTEXTCENT":{
+        "prefix":"GTEXTCENT",
+        "body":"GTEXTCENT ${1:y}, ${2:user_text}",
+        "description":"Align texts to the center"
+    },
+    "GTITLE":{
+        "prefix":"GTITLE",
+        "body":"GTITLE ${1:user_title}",
+        "description":"Graphic title"
+    },
+    "HAMMER":{
+        "prefix":"HAMMER",
+        "body":"HAMMER",
+        "description":"Hammer optimization"
+    },
+    "IMA":{
+        "prefix":"IMA",
+        "body":"IMA ${1:outfile}, ${2:infile}",
+        "description":"Image analysis"
+    },
+    "IMAGECOMBINE":{
+        "prefix":"IMAGECOMBINE",
+        "body":"IMAGECOMBINE ${1:src1}, ${2:src2}, ${3:dst}, ${4:mode}",
+        "description":"Combine two images"
+    },
+    "IMAGEEXTRACT":{
+        "prefix":"IMAGEEXTRACT",
+        "body":"IMAGEEXTRACT ${1:src}, ${2:dst}, ${3:startx}, ${4:starty}, ${5:width}, ${6:height}",
+        "description":"Extract rectangular region"
+    },
+    "IMASHOW":{
+        "prefix":"IMASHOW",
+        "body":"IMASHOW ${1:filename.ima}",
+        "description":"Display IMA/BIM file on the viewer window"
+    },
+    "IMASUM":{
+        "prefix":"IMASUM",
+        "body":"IMASUM ${1:filename1}, ${2:filename2}, ${3:outfilename}",
+        "description":"Summarize intensity"
+    },
+    "IMPORTEXTRADATA":{
+        "prefix":"IMPORTEXTRADATA",
+        "body":"IMPORTEXTRADATA ${1:surf}, ${2:filename}",
+        "description":"Import to extra data editor"
+    },
+    "INPUT":{
+        "prefix":"INPUT",
+        "body":"INPUT",
+        "description":""
+    },
+    "INSERT":{
+        "prefix":"INSERT",
+        "body":"INSERT ${1:surf}",
+        "description":"Insert a surface"
+    },
+    "INSERTCONFIG":{
+        "prefix":"INSERTCONFIG",
+        "body":"INSERTCONFIG ${1:config}",
+        "description":"Insert configuration to multi-configuration editor"
+    },
+    "INSERTMCO":{
+        "prefix":"INSERTMCO",
+        "body":"INSERTMCO ${1:row}",
+        "description":"Insert operand to multi-configuration editor"
+    },
+    "INSERTMFO":{
+        "prefix":"INSERTMFO",
+        "body":"INSERTMFO ${1:row}",
+        "description":"Insert operand to merit function editor"
+    },
+    "INSERTOBJECT":{
+        "prefix":"INSERTOBJECT",
+        "body":"INSERTOBJECT ${1:surf}, ${2:object}",
+        "description":"Insert NSC object"
+    },
+    "INSERTTOL":{
+        "prefix":"INSERTTOL",
+        "body":"INSERTTOL ${1:row}",
+        "description":"Insert operand to tolerance analysis editor"
+    },
+    "LINE":{
+        "prefix":"LINE",
+        "body":"LINE ${1:oldx}, ${2:oldy}, ${3:newx}, ${4:newy}",
+        "description":"Draw line"
+    },
+    "LOADARCHIVE":{
+        "prefix":"LOADARCHIVE",
+        "body":"LOADARCHIVE ${1:filename}, ${2:extractpath}",
+        "description":"Load .ZAR file"
+    },
+    "LOADCATALOG":{
+        "prefix":"LOADCATALOG",
+        "body":"LOADCATALOG",
+        "description":"Reload glass and coating catalog"
+    },
+    "LOADDETECTOR":{
+        "prefix":"LOADDETECTOR",
+        "body":"LOADDETECTOR ${1:surf}, ${2:object}, ${3:filename}",
+        "description":"Load to detecter"
+    },
+    "LOADLENS":{
+        "prefix":"LOADLENS",
+        "body":"LOADLENS ${1:filename}, ${2:appendflag}, ${3:session}",
+        "description":"Load new lens file"
+    },
+    "LOADMERIT":{
+        "prefix":"LOADMERIT",
+        "body":"LOADMERIT ${1:file}",
+        "description":"Load merit function"
+    },
+    "LOADTOLERANCE":{
+        "prefix":"LOADTOLERANCE",
+        "body":"LOADTOLERANCE ${1:file}",
+        "description":"Load tolerance file"
+    },
+    "LOCALTOGLOBAL":{
+        "prefix":"LOCALTOGLOBAL",
+        "body":"LOCALTOGLOBAL ${1:surf1}, ${2:surf2}, ${3:reference}",
+        "description":""
+    },
+    "LOCKWINDOW":{
+        "prefix":"LOCKWINDOW",
+        "body":"LOCKWINDOW ${1:winnum}",
+        "description":""
+    },
+    "MAKEFACETLIST":{
+        "prefix":"MAKEFACETLIST",
+        "body":"MAKEFACETLIST ${1:in}, ${2:out}",
+        "description":""
+    },
+    "MAKEFOLDER":{
+        "prefix":"MAKEFOLDER",
+        "body":"MAKEFOLDER ${1:path}",
+        "description":""
+    },
+    "MODIFYSETTINGS":{
+        "prefix":"MODIFYSETTINGS",
+        "body":"MODIFYSETTINGS ${1:settingfile}, ${2:type}, ${3:value}",
+        "description":"Modify setting file"
+    },
+    "NSTR":{
+        "prefix":"NSTR",
+        "body":"NSTR ${1:surf}, ${2:source}, ${3:split}, ${4:scatter}, ${5:usepolar}, ${6:ignore_errors}, ${7:random_seed}, ${8:save}, ${9:savefilename}, ${10:filter}",
+        "description":"Non-sequential trace"
+    },
+    "OPEN":{
+        "prefix":"OPEN",
+        "body":"OPEN ${1:file}",
+        "description":""
+    },
+    "OPENANALYSISWINDOW":{
+        "prefix":"OPENANALYSISWINDOW",
+        "body":"OPENANALYSISWINDOW ${1:type}, ${2:settingsfilename}",
+        "description":""
+    },
+    "OPTIMIZE":{
+        "prefix":"OPTIMIZE",
+        "body":"OPTIMIZE",
+        "description":""
+    },
+    "OPTRETURN":{
+        "prefix":"OPTRETURN",
+        "body":"OPTRETURN ${1:datafield}, ${2:result}",
+        "description":"Return value to optimization using ZPLM"
+    },
+    "OUTPUT":{
+        "prefix":"OUTPUT",
+        "body":"OUTPUT",
+        "description":""
+    },
+    "PARAXIAL":{
+        "prefix":"PARAXIAL",
+        "body":"PARAXIAL ${1|ON,OFF|}",
+        "description":"Paraxial or real ray"
+    },
+    "PAUSE":{
+        "prefix":"PAUSE",
+        "body":"PAUSE",
+        "description":""
+    },
+    "PIXEL":{
+        "prefix":"PIXEL",
+        "body":"PIXEL ${1:xcoord}, ${2:ycoord}",
+        "description":"Turn on the specified single pixel"
+    },
+    "PLOT":{
+        "prefix":"PLOT",
+        "body":"PLOT ${1|NEW,TITLE,TITLEX,TITLEY,BANNER,WINASPECT,COMM1,COMM2,COMM3,COMM4,COMM5,RANGEX,RANGEY,CHECK,TICK,FORMATX,FORMATY,DATA,LINE,LABEL|}",
+        "description":""
+    },
+    "PLOT2D":{
+        "prefix":"PLOT2D",
+        "body":"PLOT2D ${1|NEW,TITLE,COMM1,COMM2,COMM3,COMM4,COMM5,RANGE,ASPECT,WINASPECT,DATA,ACTIVECURSOR,DISPLAYTYPE,CONTOURINTERVAL,SURFACESCALE,LOGPLOT,HIDEADDRESS,CONFIG,GO|}",
+        "description":""
+    },
+    "POLDEFINE":{
+        "prefix":"POLDEFINE",
+        "body":"POLDEFINE ${1:Jx}, ${2:Jy}, ${3:PhaX}, ${4:PhaY}",
+        "description":"Define polarization for subsequent POLTRACE"
+    },
+    "POLTRACE":{
+        "prefix":"POLTRACE",
+        "body":"POLTRACE ${1:Hx}, ${2:Hy}, ${3:Px}, ${4:Py}, ${5:wavelength}, ${6:vec}, ${7:surf}",
+        "description":""
+    },
+    "POP":{
+        "prefix":"POP",
+        "body":"POP ${1:outfilename}, ${2:lastsurface}",
+        "description":"Physical optics propagation"
+    },
+    "PRINT":{
+        "prefix":"PRINT",
+        "body":"PRINT",
+        "description":""
+    },
+    "PRINTFILE":{
+        "prefix":"PRINTFILE",
+        "body":"PRINTFILE",
+        "description":""
+    },
+    "PRINTWINDOW":{
+        "prefix":"PRINTWINDOW",
+        "body":"PRINTWINDOW ${1:winnum}",
+        "description":""
+    },
+    "QUICKFOCUS":{
+        "prefix":"QUICKFOCUS",
+        "body":"QUICKFOCUS ${1:mode}, ${2:centroid}",
+        "description":"Focus by adjusting space before image plane"
+    },
+    "RANDOMIZE":{
+        "prefix":"RANDOMIZE",
+        "body":"RANDOMIZE ${1:seed}",
+        "description":""
+    },
+    "RAYTRACE":{
+        "prefix":"RAYTRACE",
+        "body":"RAYTRACE ${1:hx}, ${2:hy}, ${3:px}, ${4:py}, ${5:wavelength}",
+        "description":""
+    },
+    "RAYTRACEX":{
+        "prefix":"RAYTRACEX",
+        "body":"RAYTRACEX ${1:x}, ${2:y}, ${3:z}, ${4:l}, ${5:m}, ${6:n}, ${7:surf}, ${8:wavelength}",
+        "description":""
+    },
+    "READ":{
+        "prefix":"READ",
+        "body":"READ",
+        "description":""
+    },
+    "READNEXT":{
+        "prefix":"READNEXT",
+        "body":"READNEXT",
+        "description":""
+    },
+    "READSTRING":{
+        "prefix":"READSTRING",
+        "body":"READSTRING ${1:str}",
+        "description":""
+    },
+    "RELEASE":{
+        "prefix":"RELEASE",
+        "body":"RELEASE",
+        "description":""
+    },
+    "RELOADOBJECTS":{
+        "prefix":"RELOADOBJECTS",
+        "body":"RELOADOBJECTS ${1:surface}, ${2:object}",
+        "description":""
+    },
+    "REMOVEVARIABLES":{
+        "prefix":"REMOVEVARIABLES",
+        "body":"REMOVEVARIABLES",
+        "description":"Fix all variables"
+    },
+    "RENAMEFILE":{
+        "prefix":"RENAMEFILE",
+        "body":"RENAMEFILE ${1:oldfilename}, ${2:newfilename}",
+        "description":""
+    },
+    "RETURN":{
+        "prefix":"RETURN",
+        "body":"RETURN",
+        "description":""
+    },
+    "REWIND":{
+        "prefix":"REWIND",
+        "body":"REWIND",
+        "description":""
+    },
+    "SAVEARCHIVE":{
+        "prefix":"SAVEARCHIVE",
+        "body":"SAVEARCHIVE ${1:filename}",
+        "description":"Save lens to .ZAR"
+    },
+    "SAVEDETECTOR":{
+        "prefix":"SAVEDETECTOR",
+        "body":"SAVEDETECTOR ${1:filename}",
+        "description":""
+    },
+    "SAVELENS":{
+        "prefix":"SAVELENS",
+        "body":"SAVELENS ${1:filename}, ${2:session}",
+        "description":""
+    },
+    "SAVEMERIT":{
+        "prefix":"SAVEMERIT",
+        "body":"SAVEMERIT ${1:filename}",
+        "description":""
+    },
+    "SAVETOLERANCE":{
+        "prefix":"SAVETOLERANCE",
+        "body":"SAVETOLERANCE ${file}",
+        "description":""
+    },
+    "SAVEWINDOW":{
+        "prefix":"SAVEWINDOW",
+        "body":"SAVEWINDOW ${1:winname}, ${2:filename}",
+        "description":""
+    },
+    "SCATTER":{
+        "prefix":"SCATTER",
+        "body":"SCATTER ${1|ON,OFF|}",
+        "description":""
+    },
+    "SETAIM":{
+        "prefix":"SETAIM",
+        "body":"SETAIM ${1:state}",
+        "description":"Set state of ray aiming function"
+    },
+    "SETAIMDATA":{
+        "prefix":"SETAIMDATA",
+        "body":"SETAIMDATA ${1:code}, ${2:value}",
+        "description":"Set data of ray aiming function"
+    },
+    "SETCONFIG":{
+        "prefix":"SETCONFIG",
+        "body":"SETCONFIG ${1:config}",
+        "description":""
+    },
+    "SETDETECTOR":{
+        "prefix":"SETDETECTOR",
+        "body":"SETDETECTOR ${1:surf}, ${2:object}, ${3:pixel}, ${4:datatype}, ${5:value}",
+        "description":""
+    },
+    "SETMCOPERAND":{
+        "prefix":"SETMCOPERAND",
+        "body":"SETMCOPERAND ${1:row}, ${2:config}, ${3:value}, ${4:datatype}",
+        "description":""
+    },
+    "SETNSCPARAMETER":{
+        "prefix":"SETNSCPARAMETER",
+        "body":"SETNSCPARAMETER ${1:surface}, ${2:object}, ${3:parameter}, ${4:value}",
+        "description":""
+    },
+    "SETNSCPOSITION":{
+        "prefix":"SETNSCPOSITION",
+        "body":"SETNSCPOSITION ${1:surface}, ${2:object}, ${3:code}, ${4:value}",
+        "description":""
+    },
+    "SETNSCPROPERTY":{
+        "prefix":"SETNSCPROPERTY",
+        "body":"SETNSCPROPERTY ${1:surface}, ${2:object}, ${3:code}, ${4:face}, ${5:value}",
+        "description":""
+    },
+    "SETOPERAND":{
+        "prefix":"SETOPERAND",
+        "body":"SETOPERAND ${1:row}, ${2:col}, ${3:value}",
+        "description":""
+    },
+    "SETSURFACEPROPERTY":{
+        "prefix":"SETSURFACEPROPERTY",
+        "body":"SETSURFACEPROPERTY ${1:surface}, ${2:code}, ${3:value1}, ${4:value2}",
+        "description":""
+    },
+    "SETSYSTEMPROPERTY":{
+        "prefix":"SETSYSTEMPROPERTY",
+        "body":"SETSYSTEMPROPERTY ${1:code}, ${2:value1}, ${3:value2}",
+        "description":""
+    },
+    "SETTEXTSIZE":{
+        "prefix":"SETTEXTSIZE",
+        "body":"SETTEXTSIZE ${1:xsize}, ${2:ysize}",
+        "description":""
+    },
+    "SETTOL":{
+        "prefix":"SETTOL",
+        "body":"SETTOL ${1:row}, ${2:col}, ${3:data}",
+        "description":""
+    },
+    "SETVAR":{
+        "prefix":"SETVAR",
+        "body":"SETVAR",
+        "description":""
+    },
+    "SETVECSIZE":{
+        "prefix":"SETVECSIZE",
+        "body":"SETVECSIZE ${1:n}",
+        "description":""
+    },
+    "SETVIG":{
+        "prefix":"SETVIG",
+        "body":"SETVIG",
+        "description":"Set vignetting factor"
+    },
+    "SHOWBITMAP":{
+        "prefix":"SHOWBITMAP",
+        "body":"SHOWBITMAP ${1:filename}",
+        "description":""
+    },
+    "SHOWFILE":{
+        "prefix":"SHOWFILE",
+        "body":"SHOWFILE ${1:filename}, ${2:saveflag}",
+        "description":"Show text file"
+    },
+    "SOLVERETURN":{
+        "prefix":"SOLVERETURN",
+        "body":"SOLVERETURN ${1:x}",
+        "description":""
+    },
+    "SOLVETYPE":{
+        "prefix":"SOLVETYPE",
+        "body":"SOLVETYPE ${1:surf}, ${2:CODE}, ${3:arg1-4}",
+        "description":""
+    },
+    "STOPSURF":{
+        "prefix":"STOPSURF",
+        "body":"STOPSURF ${1:surf}",
+        "description":"Set stop position"
+    },
+    "TESTPLATEFIT":{
+        "prefix":"TESTPLATEFIT",
+        "body":"TESTPLATEFIT ${1:tpd_file}, ${2:log_file}, ${3:method}, ${4:number_cycles}",
+        "description":""
+    },
+    "TIMER":{
+        "prefix":"TIMER",
+        "body":"TIMER",
+        "description":""
+    },
+    "UNLOCKWINDOW":{
+        "prefix":"UNLOCKWINDOW",
+        "body":"UNLOCKWINDOW ${1:winnum}",
+        "description":""
+    },
+    "UPDATE":{
+        "prefix":"UPDATE",
+        "body":"UPDATE",
+        "description":""
+    },
+    "XDIFFIA":{
+        "prefix":"XDIFFIA",
+        "body":"XDIFFIA ${1:outfile}, ${2:infile}",
+        "description":""
+    },
+    "ZBFCLR":{
+        "prefix":"ZBFCLR",
+        "body":"ZBFCLR ${1:filename}",
+        "description":"Clear comples amplitude in ZBF"
+    },
+    "ZBFMULT":{
+        "prefix":"ZBFMULT",
+        "body":"ZBFMULT ${1:filename}, ${2:Ax}, ${3:Bx}, ${4:Ay}, ${5:By}",
+        "description":""
+    },
+    "ZBFPROPERTIES":{
+        "prefix":"ZBFPROPERTIES",
+        "body":"ZBFPROPERTIES ${1:filename}, ${2:vector}",
+        "description":""
+    },
+    "ZBFREAD":{
+        "prefix":"ZBFREAD",
+        "body":"ZBFREAD ${1:file}, ${2:beam}, ${3:property}",
+        "description":""
+    },
+    "ZBFRESAMPLE":{
+        "prefix":"ZBFRESAMPLE",
+        "body":"ZBFRESAMPLE ${1:filename}, ${2:nx}, ${3:ny}, ${4:wx}, ${5:wy}, ${6:decenterx}, ${7:decentery}",
+        "description":"Resample ZBF"
+    },
+    "ZBFSHOW":{
+        "prefix":"ZBFSHOW",
+        "body":"ZBFSHOW ${1:filename}",
+        "description":""
+    },
+    "ZBFSUM":{
+        "prefix":"ZBFSUM",
+        "body":"ZBFSUM ${1:coherent}, ${2:filename1}, ${3:filename2}, ${4:outfilename}",
+        "description":""
+    },
+    "ZBFTILT":{
+        "prefix":"ZBFTILT",
+        "body":"ZBFTILT ${1:filename}, ${2:cx}, ${3:cy}, ${4:tx}, ${5:ty}",
+        "description":""
+    },
+    "ZBFWRITE":{
+        "prefix":"ZBFWRITE",
+        "body":"ZBFWRITE ${1:file}, ${2:beam}, ${3:property}",
+        "description":""
+    },
+    "ZRDFILTER":{
+        "prefix":"ZRDFILTER",
+        "body":"ZRDFILTER ${1:infile}, ${2:outfile}, ${3:filter}",
+        "description":""
+    },
+    "ZRDSAVERAYS":{
+        "prefix":"ZRDSAVERAYS",
+        "body":"ZRDSAVERAYS ${1:infile}, ${2:outfile}, ${3:filter}, ${4:object}",
+        "description":""
+    },
+    "ZRDSUM":{
+        "prefix":"ZRDSUM",
+        "body":"ZRDSUM ${1:infile1}, ${2:infile2}, ${3:outfile}",
+        "description":"Connect two ZRD"
     }
+    
 
 }
