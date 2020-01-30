@@ -1,0 +1,851 @@
+{
+    "ABSO":{
+        "prefix":"ABSO",
+        "body":"ABSO(${1:x})",
+        "description":"Absolute value"
+    },
+    "ACOS":{
+        "prefix":"ACOS",
+        "body":"ACOS(${1:x})",
+        "description":"Arccosine"
+    },
+    "APMN":{
+        "prefix":"APMN",
+        "body":"APMN(${1:surface})",
+        "description":"Minimum aperture"
+    },
+    "APMX":{
+        "prefix":"APMX",
+        "body":"APMX(${1:surface})",
+        "description":"Maximum aperture"
+    },
+    "APXD":{
+        "prefix":"APXD",
+        "body":"APXD(${1:surface})",
+        "description":"X decenter of the aperture"
+    },
+    "APYD":{
+        "prefix":"APYD",
+        "body":"APYD(${1:surface})",
+        "description":"Y decenter of the aperture"
+    },
+    "APTP":{
+        "prefix":"APTP",
+        "body":"APTP(${1:surface})",
+        "description":"Return Aperture type"
+    },
+    "ASIN":{
+        "prefix":"ASIN",
+        "body":"ASIN(${1:x})",
+        "description":"Arcsine"
+    },
+    "ASPR":{
+        "prefix":"ASPR",
+        "body":"ASPR()",
+        "description":"Aspect ratio of the current graphic device"
+    },
+    "ATAN":{
+        "prefix":"ATAN",
+        "body":"ATAN(${1:x})",
+        "description":"Arctangent"
+    },
+    "ATYP":{
+        "prefix":"ATYP",
+        "body":"ATYP()",
+        "description":"System aperture code (EPD:0, F/#:1, NA:2, STO:3)"
+    },
+    "AVAL":{
+        "prefix":"AVAL",
+        "body":"AVAL()",
+        "description":"System aperture value"
+    },
+    "CALD":{
+        "prefix":"CALD",
+        "body":"CALD(${1:index})",
+        "description":"Return value in specified CALLMACRO buffer"
+    },
+    "CONF":{
+        "prefix":"CONF",
+        "body":"CONF()",
+        "description":"Configuration number"
+    },
+    "CONI":{
+        "prefix":"CONI",
+        "body":"CONI(${1:surface})",
+        "description":"Conic coeficient"
+    },
+    "COSI":{
+        "prefix":"COSI",
+        "body":"COSI(${1:x})",
+        "description":"Cosine"
+    },
+    "CURV":{
+        "prefix":"CURV",
+        "body":"CURV(${1:surface})",
+        "description":"Curvature"
+    },
+    "EDGE":{
+        "prefix":"EDGE",
+        "body":"EDGE(${1:surface})",
+        "description":"Edge thickness"
+    },
+    "EOFF":{
+        "prefix":"EOFF",
+        "body":"EOFF()",
+        "description":"End of file"
+    },
+    "ETIM":{
+        "prefix":"ETIM",
+        "body":"ETIM()",
+        "description":"Elapsed time from last TIMER"
+    },
+    "EXPE":{
+        "prefix":"EXPE",
+        "body":"EXPE(${1:x})",
+        "description":"Exponents: e to the power of x"
+    },
+    "EXPT":{
+        "prefix":"EXPT",
+        "body":"EXPT(${1:x})",
+        "description":"Exponents: 10 to the power of x"
+    },
+    "FICL":{
+        "prefix":"FICL",
+        "body":"FICL(${1:vec})",
+        "description":"Fiber coupling efficiency"
+    },
+    "FLDX":{
+        "prefix":"FLDX",
+        "body":"FLDX(${1:field})",
+        "description":"X angle or height of specified field"
+    },
+    "FLDY":{
+        "prefix":"FLDY",
+        "body":"FLDY(${1:field})",
+        "description":"Y angle or height of specified field"
+    },
+    "FTYP":{
+        "prefix":"FTYP",
+        "body":"FTYP()",
+        "description":"Field type"
+    },
+    "FVAN":{
+        "prefix":"FVAN",
+        "body":"FVAN(${1:field})",
+        "description":"Vignetting angle"
+    },
+    "FVCX":{
+        "prefix":"FVCX",
+        "body":"FVCX(${1:field})",
+        "description":"Vignetting compression (X)"
+    },
+    "FVCY":{
+        "prefix":"FVCY",
+        "body":"FVCY(${1:field})",
+        "description":"Vignetting compression (Y)"
+    },
+    "FVDX":{
+        "prefix":"FVDX",
+        "body":"FVDX(${1:field})",
+        "description":"Vignetting decenter (X)"
+    },
+    "FVDY":{
+        "prefix":"FVDY",
+        "body":"FVDY(${1:field})",
+        "description":"Vignetting decenter (Y)"
+    },
+    "FWGT":{
+        "prefix":"FWGT",
+        "body":"FWGT(${1:field})",
+        "description":"Field weight"
+    },
+    "GABB":{
+        "prefix":"GABB",
+        "body":"GABB(${1:surface})",
+        "description":"Abbe number of specified glass"
+    },
+    "GAUS":{
+        "prefix":"GAUS",
+        "body":"GAUS(${1:stdev})",
+        "description":"Random value in gaussian distribution"
+    },
+    "GETT":{
+        "prefix":"GETT",
+        "body":"GETT(${1:window},${2:line},${3:column})",
+        "description":"Get text from the window"
+    },
+    "GIND":{
+        "prefix":"GIND",
+        "body":"GIND(${1:surface})",
+        "description":"Refractive index at d-line"
+    },
+    "GLCA":{
+        "prefix":"GLCA",
+        "body":"GLCA(${1:surface})",
+        "description":"X direction vector of global coordinate"
+    },
+    "GLCB":{
+        "prefix":"GLCB",
+        "body":"GLCB(${1:surface})",
+        "description":"Y direction vector of global coordinate"
+    },
+    "GLCC":{
+        "prefix":"GLCC",
+        "body":"GLCC(${1:surface})",
+        "description":"Z direction vector of global coordinate"
+    },
+    "GLCM":{
+        "prefix":"GLCM",
+        "body":"GLCM(${1:surf},${2:item})",
+        "description":"Global coordinate matrix"
+    },
+    "GLCX":{
+        "prefix":"GLCX",
+        "body":"GLCX(${1:surf})",
+        "description":"X in global coordinate"
+    },
+    "GLCY":{
+        "prefix":"GLCY",
+        "body":"GLCY(${1:surf})",
+        "description":"Y in global coordinate"
+    },
+    "GLCZ":{
+        "prefix":"GLCZ",
+        "body":"GLCZ(${1:surf})",
+        "description":"Z in global coordinate"
+    },
+    "GNUM":{
+        "prefix":"GNUM",
+        "body":"GNUM(${str})",
+        "description":"Glass number in the catalog"
+    },
+    "GPAR":{
+        "prefix":"GPAR",
+        "body":"GPAR(${1:surf})",
+        "description":"Partial dispersion of the glass"
+    },
+    "GRIN":{
+        "prefix":"GRIN",
+        "body":"GRIN(${1:surf},${2:wave},${3:x},${4:y},${5:z})",
+        "description":"Refractive index at the specified point of gradient index material"
+    },
+    "IMAE":{
+        "prefix":"IMAE",
+        "body":"IMAE(${1:seed})",
+        "description":"Geometrical image analysis efficiency"
+    },
+    "INDX":{
+        "prefix":"INDX",
+        "body":"INDX(${1:surf})",
+        "description":"Refractive index at reference wavelength"
+    },
+    "INTE":{
+        "prefix":"INTE",
+        "body":"INTE(${1:x})",
+        "description":"floor integer"
+    },
+    "ISMS":{
+        "prefix":"ISMS",
+        "body":"ISMS(${1:surf})",
+        "description":"Is mirror"
+    },
+    "LOGE":{
+        "prefix":"LOGE",
+        "body":"LOGE(${1:x})",
+        "description":"Natural logarithm"
+    },
+    "LOGT":{
+        "prefix":"LOGT",
+        "body":"LOGT(${1:x})",
+        "description":"Common logarithm"
+    },
+    "LOST":{
+        "prefix":"LOST",
+        "body":"LOST(${1:code})",
+        "description":"Lost energy after NSTR"
+    },
+    "MAGN":{
+        "prefix":"MAGN",
+        "body":"MAGN(${1:x},${2:y})",
+        "description":"Return sqrt(x^2+y^2)"
+    },
+    "MAXF":{
+        "prefix":"MAXF",
+        "body":"MAXF()",
+        "description":"Maximum field angle or height"
+    },
+    "MAXG":{
+        "prefix":"MAXG",
+        "body":"MAXG()",
+        "description":"Number of loaded glasses"
+    },
+    "MCON":{
+        "prefix":"MCON",
+        "body":"MCON(${1:row},${2:config},${3:data})",
+        "description":"Get value from multi-configuration editor"
+    },
+    "MCOP":{
+        "prefix":"MCOP",
+        "body":"MCOP(${1:row},${2:config})",
+        "description":"Multi-configuration operand"
+    },
+    "MFCN":{
+        "prefix":"MFCN",
+        "body":"MFCN()",
+        "description":"Merrit function"
+    },
+    "NCON":{
+        "prefix":"NCON",
+        "body":"NCON()",
+        "description":"Number of configuration"
+    },
+    "NFLD":{
+        "prefix":"NFLD",
+        "body":"NFLD()",
+        "description":"Number of field"
+    },
+    "NOBJ":{
+        "prefix":"NOBJ",
+        "body":"NOBJ(${1:surf})",
+        "description":"Number of object defined in the specified non-sequential surface"
+    },
+    "NPAR":{
+        "prefix":"NPAR",
+        "body":"NPAR(${1:surf},${2:object},${3:param})",
+        "description":"Parameter in non-sequential component editor"
+    },
+    "NPOS":{
+        "prefix":"NPOS",
+        "body":"NPOS(${1:surf},${2:object},${3:code})",
+        "description":"Column position in non-sequential component editor"
+    },
+    "NPRO":{
+        "prefix":"NPRO",
+        "body":"NPRO(${1:surf},${2:object},${3:code},${4:face})",
+        "description":"Number or string of object property in non-sequential component editor"
+    },
+    "NSDC":{
+        "prefix":"NSDC",
+        "body":"NSDC(${1:surf},${2:object},${3:pixel},${4:data})",
+        "description":"Detecter Coherent data at specified pixel"
+    },
+    "NSDD":{
+        "prefix":"NSDD",
+        "body":"NSDD(${1:surf},${2:object},${3:pixel},${4:data})",
+        "description":"Detecter incoherent data at specified pixel"
+    },
+    "NSDE":{
+        "prefix":"NSDE",
+        "body":"NSDE(${1:surf},${2:object},${3:pixel},${4:angle},${5:data})",
+        "description":""
+    },
+    "NSDP":{
+        "prefix":"NSDP",
+        "body":"NSDP(${1:surf},${2:object},${3:pixel},${4:data})",
+        "description":""
+    },
+    "NSUR":{
+        "prefix":"NSUR",
+        "body":"NSUR()",
+        "description":"Number of surfaces"
+    },
+    "NWAV":{
+        "prefix":"NWAV",
+        "body":"NWAV()",
+        "description":"Number of wavelength"
+    },
+    "OBJC":{
+        "prefix":"OBJC",
+        "body":"OBJC(${1:str})",
+        "description":"Object with comment"
+    },
+    "OCOD":{
+        "prefix":"OCOD",
+        "body":"OCOD(${1:str})",
+        "description":"Operand code"
+    },
+    "ONUM":{
+        "prefix":"ONUM",
+        "body":"ONUM(${1:str})",
+        "description":"Operand ID number"
+    },
+    "OPDC":{
+        "prefix":"OPDC",
+        "body":"OPDC()",
+        "description":"Optical path difference"
+    },
+    "OPER":{
+        "prefix":"OPER",
+        "body":"OPER(${1:row},${2:col})",
+        "description":"Operand data on merit function editor"
+    },
+    "OPEV":{
+        "prefix":"OPEV",
+        "body":"OPEV(${1:code},${2:int1},${3:int2},${4:data1},${5:data2},${6:data3},${7:data4})",
+        "description":"Evaluate operand"
+    },
+    "OPEW":{
+        "prefix":"OPEW",
+        "body":"OPEW(${1:code},${2:int1},${3:int2},${4:data1},${5:data2},${6:data3},${7:data4},${8:data5},${9:data6})",
+        "description":"Evaluate operand"
+    },
+    "OPTH":{
+        "prefix":"OPTH",
+        "body":"OPTH(${1:surf})",
+        "description":"Optical path to specified surface"
+    },
+    "PARM":{
+        "prefix":"PARM",
+        "body":"PARM(${1:param},${2:surf})",
+        "description":"Parameter of the surface"
+    },
+    "PIXX":{
+        "prefix":"PIXX",
+        "body":"PIXX(${1:str})",
+        "description":"Number of pixels along x direction"
+    },
+    "PIXY":{
+        "prefix":"PIXY",
+        "body":"PIXY(${1:str})",
+        "description":"Number of pixels along y direction"
+    },
+    "PMOD":{
+        "prefix":"PMOD",
+        "body":"PMOD()",
+        "description":"Paraxial mode on/off"
+    },
+    "POWR":{
+        "prefix":"POWR",
+        "body":"POWR(${1:x},${2:y})",
+        "description":"Powered"
+    },
+    "PVHX":{
+        "prefix":"PVHX",
+        "body":"PVHX()",
+        "description":"data1 in ZPLM"
+    },
+    "PVHY":{
+        "prefix":"PVHY",
+        "body":"PVHY()",
+        "description":"data2 in ZPLM"
+    },
+    "PVPX":{
+        "prefix":"PVPX",
+        "body":"PVPX()",
+        "description":"data3 in ZPLM"
+    },
+    "PVPY":{
+        "prefix":"PVPY",
+        "body":"PVPY()",
+        "description":"data4 in ZPLM"
+    },
+    "PWAV":{
+        "prefix":"PWAV",
+        "body":"PWAV()",
+        "description":"Primary wavelength"
+    },
+    "RADI":{
+        "prefix":"RADI",
+        "body":"RADI(${1:surf})",
+        "description":"Radius"
+    },
+    "RAGX":{
+        "prefix":"RAGX",
+        "body":"RAGX(${1:surf})",
+        "description":""
+    },
+    "RAGY":{
+        "prefix":"RAGY",
+        "body":"RAGY(${1:surf})",
+        "description":""
+    },
+    "RAGZ":{
+        "prefix":"RAGZ",
+        "body":"RAGZ(${1:surf})",
+        "description":""
+    },
+    "RAND":{
+        "prefix":"RAND",
+        "body":"RAND(${1:x})",
+        "description":"Random, flat distribution"
+    },
+    "RANX":{
+        "prefix":"RANX",
+        "body":"RANX(${1:surf})",
+        "description":"X direction cosine of surface normal"
+    },
+    "RANY":{
+        "prefix":"RANY",
+        "body":"RANY(${1:surf})",
+        "description":"Y direction cosine of surface normal"
+    },
+    "RANZ":{
+        "prefix":"RANZ",
+        "body":"RANZ(${1:surf})",
+        "description":"Z direction cosine of surface normal"
+    },
+    "RAYE":{
+        "prefix":"RAYE",
+        "body":"RAYE()",
+        "description":"Ray error flag"
+    },
+    "RAYL":{
+        "prefix":"RAYL",
+        "body":"RAYL(${1:surf})",
+        "description":"X direction cosine of the ray"
+    },
+    "RAYM":{
+        "prefix":"RAYM",
+        "body":"RAYM(${1:surf})",
+        "description":"Y direction cosine of the ray"
+    },
+    "RAYN":{
+        "prefix":"RAYN",
+        "body":"RAYN(${1:surf})",
+        "description":"Z direction cosine of the ray"
+    },
+    "RAYO":{
+        "prefix":"RAYO",
+        "body":"RAYO(${1:surf})",
+        "description":"Ray optical path from the previous surface to the specified surface"
+    },
+    "RAYT":{
+        "prefix":"RAYT",
+        "body":"RAYT(${1:surf})",
+        "description":"Ray trace path from the previous surface to the specified surface"
+    },
+    "RAYV":{
+        "prefix":"RAYV",
+        "body":"RAYV()",
+        "description":""
+    },
+    "RAYX":{
+        "prefix":"RAYX",
+        "body":"RAYX(${1:surf})",
+        "description":""
+    },
+    "RAYY":{
+        "prefix":"RAYY",
+        "body":"RAYY(${1:surf})",
+        "description":""
+    },
+    "RAYZ":{
+        "prefix":"RAYZ",
+        "body":"RAYZ(${1:surf})",
+        "description":""
+    },
+    "RELI":{
+        "prefix":"RELI",
+        "body":"RELI(${1:field})",
+        "description":"Relative illumination"
+    },
+    "SAGG":{
+        "prefix":"SAGG",
+        "body":"SAGG(${1:x},${2:y},${3:z})",
+        "description":"Sag"
+    },
+    "SCOM":{
+        "prefix":"SCOM",
+        "body":"SCOM(${1:A},${2:B})",
+        "description":"Compare strings"
+    },
+    "SDIA":{
+        "prefix":"SDIA",
+        "body":"SDIA(${1:surf})",
+        "description":"Surface diameter"
+    },
+    "SIGN":{
+        "prefix":"SIGN",
+        "body":"SIGN(${1:x})",
+        "description":""
+    },
+    "SINE":{
+        "prefix":"SINE",
+        "body":"SINE(${1:x})",
+        "description":"Sine"
+    },
+    "SLEN":{
+        "prefix":"SLEN",
+        "body":"SLEN(${1:str})",
+        "description":"Length of the string"
+    },
+    "SOLV":{
+        "prefix":"SOLV",
+        "body":"SOLV(${1:surf},${2:code},${3:param})",
+        "description":"Solve type"
+    },
+    "SOSO":{
+        "prefix":"SOSO",
+        "body":"SOSO(${1:code})",
+        "description":"Surface or object number of the current macro solve"
+    },
+    "SPRO":{
+        "prefix":"SPRO",
+        "body":"SPRO(${1:surf},${2:code})",
+        "description":"Surface property"
+    },
+    "SPRX":{
+        "prefix":"SPRX",
+        "body":"SPRX(${1:surf},${2:code},${3:value2})",
+        "description":"Surface property"
+    },
+    "SQRT":{
+        "prefix":"SQRT",
+        "body":"SQRT(${1:x})",
+        "description":"Square root"
+    },
+    "SURC":{
+        "prefix":"SURC",
+        "body":"SURC(${1:A$})",
+        "description":"Surface with comment"
+    },
+    "SVAL":{
+        "prefix":"SVAL",
+        "body":"SVAL(${1:A$})",
+        "description":"String to value"
+    },
+    "SYPR":{
+        "prefix":"SYPR",
+        "body":"SYPR(${1:code})",
+        "description":"System property"
+    },
+    "TANG":{
+        "prefix":"TANG",
+        "body":"TANG(${1:x})",
+        "description":"Tangent"
+    },
+    "TMAS":{
+        "prefix":"TMAS",
+        "body":"TMAS()",
+        "description":"Total mass"
+    },
+    "THIC":{
+        "prefix":"THIC",
+        "body":"THIC(${1:surf})",
+        "description":"Thickness"
+    },
+    "TOLV":{
+        "prefix":"TOLV",
+        "body":"TOLV(${1:op},${2:col})",
+        "description":"Value of tolerance analysis editor"
+    },
+    "UNIT":{
+        "prefix":"UNIT",
+        "body":"UNIT()",
+        "description":"Current unit"
+    },
+    "VEC1":{
+        "prefix":"VEC1",
+        "body":"VEC1(${1:x})",
+        "description":"Vector value at x"
+    },
+    "VEC2":{
+        "prefix":"VEC2",
+        "body":"VEC2(${1:x})",
+        "description":"Vector value at x"
+    },
+    "VEC3":{
+        "prefix":"VEC3",
+        "body":"VEC3(${1:x})",
+        "description":"Vector value at x"
+    },
+    "VEC4":{
+        "prefix":"VEC4",
+        "body":"VEC4(${1:x})",
+        "description":"Vector value at x"
+    },
+    "VERS":{
+        "prefix":"VERS",
+        "body":"VERS()",
+        "description":"Zemax version"
+    },
+    "WAVL":{
+        "prefix":"WAVL",
+        "body":"WAVL(${wav})",
+        "description":"Wavelength in micrometer"
+    },
+    "WINL":{
+        "prefix":"WINL",
+        "body":"WINL()",
+        "description":""
+    },
+    "WINN":{
+        "prefix":"WINN",
+        "body":"WINN()",
+        "description":""
+    },
+    "WWGT":{
+        "prefix":"WWGT",
+        "body":"WWGT(${1:wav})",
+        "description":"Wavelength weight"
+    },
+    "XMIN":{
+        "prefix":"XMIN",
+        "body":"XMIN()",
+        "description":"Minimum X coordinate of the graphic window"
+    },
+    "XMAX":{
+        "prefix":"XMAX",
+        "body":"XMAX()",
+        "description":"Maximum X coordinate of the graphic window"
+    },
+    "YMIN":{
+        "prefix":"YMIN",
+        "body":"YMIN()",
+        "description":"Minimum Y coordinate of the graphic window"
+    },
+    "YMAX":{
+        "prefix":"YMAX",
+        "body":"YMAX()",
+        "description":"Maximum Y coordinate of the graphic window"
+    },
+
+
+
+    "$BUFFER":{
+        "prefix":"$BUFFER",
+        "body":"$BUFFER()",
+        "description":"Get string from buffer"
+    },
+    "$CALLSTR":{
+        "prefix":"$CALLSTR",
+        "body":"$CALLSTR(${1:i})",
+        "description":"Get string at specified index of the buffer"
+    },
+    "$COAT":{
+        "prefix":"$COAT",
+        "body":"$COAT(${1:i})",
+        "description":"Coating name"
+    },
+    "$COATINGPATH":{
+        "prefix":"$COATINGPATH",
+        "body":"$COATINGPATH()",
+        "description":"Coating file path"
+    },
+    "$COMMENT":{
+        "prefix":"$COMMENT",
+        "body":"$COMMENT(${1:i})",
+        "description":"Comment"
+    },
+    "DATAPATH":{
+        "prefix":"DATAPATH",
+        "body":"DATAPATH()",
+        "description":"Data file path"
+    },
+    "$DATE":{
+        "prefix":"$DATE",
+        "body":"$DATE()",
+        "description":"Current date and time"
+    },
+    "$EXTENSIONPATH":{
+        "prefix":"$EXTENSIONPATH",
+        "body":"$EXTENSIONPATH()",
+        "description":"Zemax extension path"
+    },
+    "$FILENAME":{
+        "prefix":"$FILENAME",
+        "body":"$FILENAME()",
+        "description":"Current lens file name"
+    },
+    "$FILEPATH":{
+        "prefix":"$FILEPATH",
+        "body":"$FILEPATH()",
+        "description":"Current lens file (full path)"
+    },
+    "$GETSTRING":{
+        "prefix":"$GETSTRING",
+        "body":"$GETSTRING(${1:str},${2:n})",
+        "description":"Get substring of string separated with space"
+    },
+    "$GETSTRINGC":{
+        "prefix":"$GETSTRINGC",
+        "body":"$GETSTRINGC(${1:str},${2:n})",
+        "description":"Get substring of string separated with comma"
+    },
+    "$GLASS":{
+        "prefix":"$GLASS",
+        "body":"$GLASS(${1:i})",
+        "description":"Glass name"
+    },
+    "$GLASSCATALOG":{
+        "prefix":"$GLASSCATALOG",
+        "body":"$GLASSCATALOG(${1:i})",
+        "description":"Glass catalog"
+    },
+    "GLASSPATH":{
+        "prefix":"GLASSPATH",
+        "body":"GLASSPATH()",
+        "description":"Glass catalog file path"
+    },
+    "$LEFTSTRING":{
+        "prefix":"$LEFTSTRING",
+        "body":"$LEFTSTRING(${1:A},${2:n})",
+        "description":"Left n characters"
+    },
+    "$LENSNAME":{
+        "prefix":"$LENSNAME",
+        "body":"$LENSNAME()",
+        "description":"Lens title"
+    },
+    "MACROPATH":{
+        "prefix":"MACROPATH",
+        "body":"MACROPATH()",
+        "description":"Macro file path"
+    },
+    "$NOTE":{
+        "prefix":"$NOTE",
+        "body":"$NOTE(${1:line})",
+        "description":"Note defined on General System Data dialog"
+    },
+    "$OBJECTPATH":{
+        "prefix":"$OBJECTPATH",
+        "body":"$OBJECTPATH()",
+        "description":"NSC object path"
+    },
+    "$PATHNAME":{
+        "prefix":"$PATHNAME",
+        "body":"$PATHNAME()",
+        "description":"Current lens file path"
+    },
+    "$PROGRAMPATH":{
+        "prefix":"$PROGRAMPATH",
+        "body":"$PROGRAMPATH()",
+        "description":"Program file path"
+    },
+    "QUOTE":{
+        "prefix":"QUOTE",
+        "body":"QUOTE",
+        "description":"Double quote"
+    },
+    "$RIGHTSTRING":{
+        "prefix":"$RIGHTSTRING",
+        "body":"$RIGHTSTRING(${1:A},${2:n})",
+        "description":"Right n characters"
+    },
+    "$STR":{
+        "prefix":"$STR",
+        "body":"$STR(${1:expr})",
+        "description":"String in a format"
+    },
+    "$TEMPFILENAME":{
+        "prefix":"$TEMPFILENAME",
+        "body":"$TEMPFILENAME()",
+        "description":"Temporary file path (full)"
+    },
+    "$TOLCOMMENT":{
+        "prefix":"$TOLCOMMENT",
+        "body":"$TOLCOMMENT(${1:operand})",
+        "description":"Comment of the tolerance operand"
+    },
+    "$TOLOPERAND":{
+        "prefix":"$TOLOPERAND",
+        "body":"$TOLOPERAND(${1:operand})",
+        "description":"Operand name of the tolerance operand"
+    },
+    "$UNITS":{
+        "prefix":"$UNITS",
+        "body":"$UNITS()",
+        "description":"Current lens unit"
+    }
+
+}
