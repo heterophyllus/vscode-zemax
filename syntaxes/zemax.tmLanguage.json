@@ -26,9 +26,6 @@
 		},
 		{
 			"include": "#keywords"
-		},
-		{
-			"include": "#constants"
 		}
 	],
 	"repository":{
@@ -90,12 +87,12 @@
 				{
 					"match": "\\b([a-zA-Z0-9_]+)(\\$)\\b",
 					"captures":{
-					"1":{
-						"name": "variable.string.zemax"
-					},
-					"2":{
-						"name": "punctuation.definition.variable.string.zemax"
-					}
+						"1":{
+							"name": "variable.string.zemax"
+						},
+						"2":{
+							"name": "punctuation.definition.variable.string.zemax"
+						}
 					}
 				}
 			]
@@ -145,40 +142,31 @@
 							"name": "keyword.language.zemax"
 						}
 					}
-				}
-			]
-		},
-		"constants":{
-			"patterns":[
+				},
 				{
-					"comment": "type code for MODIFYSETTINGS",
+					"comment": "MODIFYSETTINGS",
 					"match": "\\b((?i)LAY_RAYS|DVW_SURFACE|DVW_DETECTER|DVW_SHOW|DVW_ROWCOL|DVW_ZPLANE|DVW_SCALE|DVW_SMOOTHING|DVW_DATA|DVW_ZRD|DVW_FILTER|DVW_MAXPLOT|DVW_MINPLOT|EXD_DISPLAYSIZE|EXD_FIELD|EXD_FILESIZE|EXD_WAVE|LSF_COHERENT|LSF_TYPE|LSF_SAMP|LSF_SPREAD|LSF_WAVE|LSF_FIELD|LSF_POLARIZATION|LSF_PLOTSCALE|PSF_TYPE|PSF_SAMP|PSF_WAVE|PSF_FIELD|PSF_SURFACE|PSF_POLARIZATION|PSF_NORMALIZE|PSF_IMAGEDELTA|PSF_ROW|PSF_PLOTSCALE|FOO_SURFACE|GBM_FIELDSIZE|GBM_RAYS|GBM_XPIX|GBM_YPIX|GBM_XSIZ|GBM_YSIZ|GBM_INPUT|GBM_OUTPUT|GBM_SURFACE|GBM_ROTATION|IMA_FIELD|IMA_IMAGESIZE|IMA_IMANAME|IMA_KRAYS|IMA_NA|IMA_OUTNAME|IMA_SURFACE|HPS_PUPILSIZE|HPS_IMAGESAMP|HPS_WAVE|HPS_FIELD|HPS_IMAGEDELTA|HPS_TYPE|HPC_PUPILSAMP|HPC_IMAGESAMP|HPC_WAVE|HPC_FIELD|HPC_IMAGEDELTA|HPC_TYPE|ILL_SOURCE|ILL_SMOOTH|ILL_DETSIZE|ILL_SURFACE|ISM_INPUTFILE|ISM_FIELDHEIGHT|ISM_OVERSAMPLING|ISM_GUARDBAND|ISM_FLIP|ISM_ROTATE|ISM_WAVE|ISM_FIELD|ISM_PSAMP|ISM_ISAMP|ISM_PSFX|ISM_PSFY|ISM_ABERRATIONS|ISM_POLARIZATION|ISM_SHOWAS|ISM_REFERENCE|ISM_SUPPRESS|ISM_PIXELSIZE|ISM_XSIZE|ISM_YSIZE|ISM_OUTPUTFILE|MTF_SAMP|MTF_WAVE|MTF_FIELD|MTF_TYPE|MTF_SURF|MTF_MAXF|MTF_SDLI|MTF_POLAR|MTF_DASH|SHA_ROTX|SHA_ROTY|SHA_ROTZ|PCI_FIELD|PCI_FILESIZE|PCI_RESAMPLE|PCI_RSNX|PCI_RSNY|PCI_RSDCX|PCI_RSDCY|PCI_RSDLX|PCI_RSDLY|POP_END|POP_FIELD|POP_START|POP_WAVE|POP_AUTO|POP_BEAMTYPE|POP_PARM[1-9]|POP_PEAKIRRAD|POP_POWER|POP_SAMPX|POP_SAMPY|POP_SOURCEFILE|POP_WIDEX|POP_WIDEY|POP_COMPUTE|POP_FIBERFILE|POP_FIBERTYPE|POP_FPARAM[1-9]|POP_IGNOREPOL|POP_POSITION|POP_TILTX|POP_TILTY|SPT_RAYS|WFM_SAMP|WFM_FIELD|WFM_WAVE|WFM_SUBSR|WFM_SUBSX|WFM_SUBSY)\\b",
 					"captures": {
 						"1":{
 							"name": "constant.language.zemax"
 						}
+						
 					}
 				},
 				{
-					"comment": "type for PLOT",
-					"match": "\\b((?i)PLOT)\\s+((?i)NEW|TITLE|TITLE|BANNER|WINASPECT|COMM|RANGE[XY]|CHECK|TICK|FORMAT[XY]|DATA|LINE|LABEL)\\b",
+					"comment": "PLOT",
+					"match": "\\b((?i)NEW|TITLE|TITLE[XY]|BANNER|WINASPECT|COMM[1-6]|RANGE[XY]|CHECK|TICK|FORMAT[XY]|DATA|LINE|LABEL)\\b",
 					"captures": {
 						"1":{
-							"name": "keyword.language.zemax"
-						},
-						"2":{
 							"name": "constant.language.zemax"
 						}
 					}
 				},
 				{
-					"comment": "type for PLOT2D",
-					"match": "\\b((?i)PLOT2D)\\s+((?i)NEW|TITLE|COMM|RANGE|ASPECT|WINASPECT|DATA|ACTIVECURSOR|DISPLAYTYPE|CONTOURINTERVAL|SURFACESCALE|LOGPLOT|HIDEADDRESS|CONFIG)\\b",
+					"comment": "PLOT2D",
+					"match": "\\b((?i)NEW|TITLE|COMM[1-5]|RANGE|ASPECT|WINASPECT|DATA|ACTIVECURSOR|DISPLAYTYPE|CONTOURINTERVAL|SURFACESCALE|LOGPLOT|HIDEADDRESS|CONFIG)\\b",
 					"captures": {
 						"1":{
-							"name": "keyword.language.zemax"
-						},
-						"2":{
 							"name": "constant.language.zemax"
 						}
 					}
