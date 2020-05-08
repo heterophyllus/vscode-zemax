@@ -4,6 +4,11 @@ All notable changes to the "vscode-zemax" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.1]
+- Update snippets
+- Update auto closing pairs
+- Simplify display name
+
 ## [0.3.0]
 - Add snippets
 
