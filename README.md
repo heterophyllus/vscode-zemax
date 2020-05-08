@@ -6,7 +6,7 @@ This extension adds syntax highlighting and snippets for [Zemax OpticStudio](htt
 ![syntax](images/syntax.png)
 
 ## Changelog
-Read the [CHANGLELOG](CHANGELOG.md) to know what has changed over the last few versions of this extension.
+Read the [CHANGELOG](CHANGELOG.md) to know what has changed over the last few versions of this extension.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) for details.
