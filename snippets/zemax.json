@@ -412,7 +412,7 @@
     "PMOD":{
         "prefix":"PMOD",
         "body":"PMOD()",
-        "description":"Paraxial mode on/off"
+        "description":"0 if paraxial mode is off, else 1."
     },
     "POWR":{
         "prefix":"POWR",
@@ -452,17 +452,17 @@
     "RAGX":{
         "prefix":"RAGX",
         "body":"RAGX(${1:surf})",
-        "description":""
+        "description":"The global x coordinate of the ray intercept."
     },
     "RAGY":{
         "prefix":"RAGY",
         "body":"RAGY(${1:surf})",
-        "description":""
+        "description":"The global y coordinate of the ray intercept."
     },
     "RAGZ":{
         "prefix":"RAGZ",
         "body":"RAGZ(${1:surf})",
-        "description":""
+        "description":"The global z coordinate of the ray intercept."
     },
     "RAND":{
         "prefix":"RAND",
@@ -557,7 +557,7 @@
     "SIGN":{
         "prefix":"SIGN",
         "body":"SIGN(${1:x})",
-        "description":""
+        "description":"Returns -1 if the argument is less than zero, 0 if the argument is zero, and +1 if the argument is positive."
     },
     "SINE":{
         "prefix":"SINE",
@@ -568,6 +568,11 @@
         "prefix":"SLEN",
         "body":"SLEN(${1:str})",
         "description":"Length of the string"
+    },
+    "SOLM":{
+        "prefix":"SOLM",
+        "body":"SOLM(${1:operand}, ${2:config}, ${3:code})",
+        "description":"The return value is data about the solve type and data for the specified multi configuration operand and configuration."
     },
     "SOLV":{
         "prefix":"SOLV",
@@ -588,6 +593,11 @@
         "prefix":"SPRX",
         "body":"SPRX(${1:surf},${2:code},${3:value2})",
         "description":"Surface property"
+    },
+    "SRCN":{
+        "prefix":"SRCN",
+        "body":"SRCN(${1:A},${2:n})",
+        "description":"Surface matching comment #n."
     },
     "SQRT":{
         "prefix":"SQRT",
@@ -667,17 +677,17 @@
     "WINL":{
         "prefix":"WINL",
         "body":"WINL()",
-        "description":""
+        "description":"Returns the number of the analysis window most recently opened by the keyword"
     },
     "WINN":{
         "prefix":"WINN",
         "body":"WINN()",
-        "description":""
+        "description":"Returns the number of open analysis windows."
     },
     "WWGT":{
         "prefix":"WWGT",
         "body":"WWGT(${1:wav})",
-        "description":"Wavelength weight"
+        "description":"Wavelength weighting"
     },
     "XMIN":{
         "prefix":"XMIN",
@@ -1024,7 +1034,7 @@
     "GLOBALTOLOCAL":{
         "prefix":"GLOBALTOLOCAL",
         "body":"GLOBALTOLOCAL ${1:surf1}, ${2:surf2}, ${3:direction}",
-        "description":""
+        "description":"Converts coordinate breaks from global to local references."
     },
     "GRAPHICS":{
         "prefix":"GRAPHICS",
@@ -1084,7 +1094,7 @@
     "INPUT":{
         "prefix":"INPUT",
         "body":"INPUT",
-        "description":""
+        "description":"INPUT provides a means for prompting the user for numeric or text data when the macro is run."
     },
     "INSERT":{
         "prefix":"INSERT",
@@ -1119,82 +1129,87 @@
     "LINE":{
         "prefix":"LINE",
         "body":"LINE ${1:oldx}, ${2:oldy}, ${3:newx}, ${4:newy}",
-        "description":"Draw line"
+        "description":"The primitive line drawing function for graphical displays."
     },
     "LOADARCHIVE":{
         "prefix":"LOADARCHIVE",
         "body":"LOADARCHIVE ${1:filename}, ${2:extractpath}",
-        "description":"Load .ZAR file"
+        "description":"Opens an existing Zemax archive (*.ZAR) file."
     },
     "LOADCATALOG":{
         "prefix":"LOADCATALOG",
         "body":"LOADCATALOG",
-        "description":"Reload glass and coating catalog"
+        "description":"Reloads glass and coating catalogs for the currently loaded lens."
     },
     "LOADDETECTOR":{
         "prefix":"LOADDETECTOR",
         "body":"LOADDETECTOR ${1:surf}, ${2:object}, ${3:filename}",
-        "description":"Load to detecter"
+        "description":"Loads the data saved in a file to an NSC Detector Rectangle, Detector Color, Detector Polar, or Detector Volume object."
     },
     "LOADLENS":{
         "prefix":"LOADLENS",
         "body":"LOADLENS ${1:filename}, ${2:appendflag}, ${3:session}",
-        "description":"Load new lens file"
+        "description":"Loads a new lens file, replacing any lens file currently in memory."
     },
     "LOADMERIT":{
         "prefix":"LOADMERIT",
         "body":"LOADMERIT ${1:file}",
-        "description":"Load merit function"
+        "description":"Loads a merit function file, replacing the merit function in the current lens."
     },
     "LOADTOLERANCE":{
         "prefix":"LOADTOLERANCE",
         "body":"LOADTOLERANCE ${1:file}",
-        "description":"Load tolerance file"
+        "description":"Loads a tolerance file, replacing the tolerances in the current lens."
     },
     "LOCALTOGLOBAL":{
         "prefix":"LOCALTOGLOBAL",
         "body":"LOCALTOGLOBAL ${1:surf1}, ${2:surf2}, ${3:reference}",
-        "description":""
+        "description":"Converts coordinate breaks from local to global references."
     },
     "LOCKWINDOW":{
         "prefix":"LOCKWINDOW",
         "body":"LOCKWINDOW ${1:winnum}",
-        "description":""
+        "description":"Locks any one or all open windows."
     },
     "MAKEFACETLIST":{
         "prefix":"MAKEFACETLIST",
         "body":"MAKEFACETLIST ${1:in}, ${2:out}",
-        "description":""
+        "description":"Makes an ASCI listing of the vertices of a faceted description of any importable CAD file."
     },
     "MAKEFOLDER":{
         "prefix":"MAKEFOLDER",
         "body":"MAKEFOLDER ${1:path}",
-        "description":""
+        "description":"Makes a folder for files."
     },
     "MODIFYSETTINGS":{
         "prefix":"MODIFYSETTINGS",
         "body":"MODIFYSETTINGS ${1:settingfile}, ${2:type}, ${3:value}",
-        "description":"Modify setting file"
+        "description":"Modifies data within the settings files used by GETTEXTFILE."
+    },
+    "NSLT":{
+        "prefix":"NSLT",
+        "body":"NSLT ${1:surf}, ${2:source}, ${3:ray_sampling}, ${4:edge_sampling}",
+        "description":"Initiates a Non-sequential LightningTrace."
     },
     "NSTR":{
         "prefix":"NSTR",
         "body":"NSTR ${1:surf}, ${2:source}, ${3:split}, ${4:scatter}, ${5:usepolar}, ${6:ignore_errors}, ${7:random_seed}, ${8:save}, ${9:savefilename}, ${10:filter}",
-        "description":"Non-sequential trace"
+        "description":"Initiates a Non-sequential trace."
     },
     "OPEN":{
         "prefix":"OPEN",
         "body":"OPEN ${1:file}",
-        "description":""
+        "description":"Opens an existing text file for reading by the READ command."
     },
     "OPENANALYSISWINDOW":{
         "prefix":"OPENANALYSISWINDOW",
         "body":"OPENANALYSISWINDOW ${1:type}, ${2:settingsfilename}",
-        "description":""
+        "description":"Opens a new analysis window."
     },
     "OPTIMIZE":{
         "prefix":"OPTIMIZE",
         "body":"OPTIMIZE",
-        "description":""
+        "description":"Invokes the optimization algorithm to optimize the current lens with the current merit function."
     },
     "OPTRETURN":{
         "prefix":"OPTRETURN",
@@ -1204,42 +1219,42 @@
     "OUTPUT":{
         "prefix":"OUTPUT",
         "body":"OUTPUT",
-        "description":""
+        "description":"Specifies destination for text output. Output is either to the screen, or to a file."
     },
     "PARAXIAL":{
         "prefix":"PARAXIAL",
         "body":"PARAXIAL ${1|ON,OFF|}",
-        "description":"Paraxial or real ray"
+        "description":"Used to control whether ray tracing is done with paraxial or real rays."
     },
     "PAUSE":{
         "prefix":"PAUSE",
         "body":"PAUSE",
-        "description":""
+        "description":"Pauses macro execution, optionally while displaying a status message."
     },
     "PIXEL":{
         "prefix":"PIXEL",
         "body":"PIXEL ${1:xcoord}, ${2:ycoord}",
-        "description":"Turn on the specified single pixel"
+        "description":"Turns on a single pixel on the current graphics screen."
     },
     "PLOT":{
         "prefix":"PLOT",
         "body":"PLOT ${1|NEW,TITLE,TITLEX,TITLEY,BANNER,WINASPECT,COMM1,COMM2,COMM3,COMM4,COMM5,RANGEX,RANGEY,CHECK,TICK,FORMATX,FORMATY,DATA,LINE,LABEL|}",
-        "description":""
+        "description":"The PLOT keyword supports a number of arguments used to simplify the task of creating plots of numeric data."
     },
     "PLOT2D":{
         "prefix":"PLOT2D",
         "body":"PLOT2D ${1|NEW,TITLE,COMM1,COMM2,COMM3,COMM4,COMM5,RANGE,ASPECT,WINASPECT,DATA,ACTIVECURSOR,DISPLAYTYPE,CONTOURINTERVAL,SURFACESCALE,LOGPLOT,HIDEADDRESS,CONFIG,GO|}",
-        "description":""
+        "description":"The PLOT2D keyword supports a number of arguments used to simplify the task of creating plots of numeric data."
     },
     "POLDEFINE":{
         "prefix":"POLDEFINE",
         "body":"POLDEFINE ${1:Jx}, ${2:Jy}, ${3:PhaX}, ${4:PhaY}",
-        "description":"Define polarization for subsequent POLTRACE"
+        "description":"Defines the input polarization state for subsequent POLTRACE calls."
     },
     "POLTRACE":{
         "prefix":"POLTRACE",
         "body":"POLTRACE ${1:Hx}, ${2:Hy}, ${3:Px}, ${4:Py}, ${5:wavelength}, ${6:vec}, ${7:surf}",
-        "description":""
+        "description":"Calls the OpticStudio polarization ray tracing routines to trace a particular ray through the current system."
     },
     "POP":{
         "prefix":"POP",
@@ -1249,17 +1264,17 @@
     "PRINT":{
         "prefix":"PRINT",
         "body":"PRINT",
-        "description":""
+        "description":"Output constant text and variable data to either the screen or a file, depending upon the current status of the keyword OUTPUT."
     },
     "PRINTFILE":{
         "prefix":"PRINTFILE",
         "body":"PRINTFILE",
-        "description":""
+        "description":"Prints a text file."
     },
     "PRINTWINDOW":{
         "prefix":"PRINTWINDOW",
         "body":"PRINTWINDOW ${1:winnum}",
-        "description":""
+        "description":"Prints any open graphic or text window."
     },
     "QUICKFOCUS":{
         "prefix":"QUICKFOCUS",
@@ -1269,32 +1284,52 @@
     "RANDOMIZE":{
         "prefix":"RANDOMIZE",
         "body":"RANDOMIZE ${1:seed}",
-        "description":""
+        "description":"Seeds the random number generator."
+    },
+    "RAYGENERATOR":{
+        "prefix":"RAYGENERATOR",
+        "body":"RAYGENERATOR ${1:rsmxf_ile}, ${2:ray_file}, ${3:num_rays}, ${4:min_azimuth}, ${5:max_azimuth}, ${6:min_inclination}, ${7:max_inclination}, ${8:origination_method}, ${9:origination_radius}, ${10:spectrum_type}, ${11:arg1}, ${12:arg2}, ${13:arg3}",
+        "description":"Runs the ray generator, which is used to create a source ray file from a Radiant Source ModelTM file."
     },
     "RAYTRACE":{
         "prefix":"RAYTRACE",
         "body":"RAYTRACE ${1:hx}, ${2:hy}, ${3:px}, ${4:py}, ${5:wavelength}",
-        "description":""
+        "description":"Calls the OpticStudio ray tracing routines to trace a particular ray through the current system."
     },
     "RAYTRACEX":{
         "prefix":"RAYTRACEX",
         "body":"RAYTRACEX ${1:x}, ${2:y}, ${3:z}, ${4:l}, ${5:m}, ${6:n}, ${7:surf}, ${8:wavelength}",
-        "description":""
+        "description":"Calls the OpticStudio ray tracing routines to trace a particular ray from any starting surface through the current system."
     },
     "READ":{
         "prefix":"READ",
         "body":"READ",
-        "description":""
+        "description":"Reads data from an existing text file opened for reading by the OPEN command."
+    },
+    "READ_LOCALE":{
+        "prefix":"READ_LOCALE",
+        "body":"READ_LOCALE",
+        "description":"Reads data from an existing text file opened for reading by the OPEN command."
+    },
+    "READNEXT_LOCALE":{
+        "prefix":"READNEXT_LOCALE",
+        "body":"READNEXT_LOCALE",
+        "description":"Reads data from an existing text file opened for reading by the OPEN command."
     },
     "READNEXT":{
         "prefix":"READNEXT",
         "body":"READNEXT",
-        "description":""
+        "description":"Reads data from an existing text file opened for reading by the OPEN command."
+    },
+    "READSKIP":{
+        "prefix":"READSKIP",
+        "body":"READSKIP ${1:n}",
+        "description":"Reads any number of unwanted characters from an existing text file opened for reading by the OPEN command."
     },
     "READSTRING":{
         "prefix":"READSTRING",
         "body":"READSTRING ${1:str}",
-        "description":""
+        "description":"Reads data from an existing text file opened for reading by the OPEN command."
     },
     "RELEASE":{
         "prefix":"RELEASE",
@@ -1304,17 +1339,22 @@
     "RELOADOBJECTS":{
         "prefix":"RELOADOBJECTS",
         "body":"RELOADOBJECTS ${1:surface}, ${2:object}",
-        "description":""
+        "description":"Reloads NSC objects into the NSC Editor."
     },
     "REMOVEVARIABLES":{
         "prefix":"REMOVEVARIABLES",
         "body":"REMOVEVARIABLES",
-        "description":"Fix all variables"
+        "description":"Sets all currently defined variables to fixed status."
+    },
+    "RESUMEUPDATES":{
+        "prefix":"RESUMEUPDATES",
+        "body":"RESUMEUPDATES",
+        "description":"Prevents any UI editor windows from being updated by ZPL commands while suspended, and RESUMEUPDATES ends the suspension."
     },
     "RENAMEFILE":{
         "prefix":"RENAMEFILE",
         "body":"RENAMEFILE ${1:oldfilename}, ${2:newfilename}",
-        "description":""
+        "description":"Rename a file."
     },
     "RETURN":{
         "prefix":"RETURN",
@@ -1324,232 +1364,267 @@
     "REWIND":{
         "prefix":"REWIND",
         "body":"REWIND",
-        "description":""
+        "description":"Erases the last line printed by the PRINT command, up to the previous end of line."
     },
     "SAVEARCHIVE":{
         "prefix":"SAVEARCHIVE",
         "body":"SAVEARCHIVE ${1:filename}",
-        "description":"Save lens to .ZAR"
+        "description":"Saves the current lens to a Zemax archive (*.ZAR) file."
     },
     "SAVEDETECTOR":{
         "prefix":"SAVEDETECTOR",
         "body":"SAVEDETECTOR ${1:filename}",
-        "description":""
+        "description":"Saves the data currently on an NSC Detector Rectangle, Detector Color, Detector Polar, or Detector Volume object to a file."
     },
     "SAVELENS":{
         "prefix":"SAVELENS",
         "body":"SAVELENS ${1:filename}, ${2:session}",
-        "description":""
+        "description":"Saves the current lens file."
     },
     "SAVEMERIT":{
         "prefix":"SAVEMERIT",
         "body":"SAVEMERIT ${1:filename}",
-        "description":""
+        "description":"Saves the current merit function to a file."
     },
     "SAVETOLERANCE":{
         "prefix":"SAVETOLERANCE",
         "body":"SAVETOLERANCE ${1:file}",
-        "description":""
+        "description":"Saves the current tolerances to a file."
     },
     "SAVEWINDOW":{
         "prefix":"SAVEWINDOW",
         "body":"SAVEWINDOW ${1:winname}, ${2:filename}",
-        "description":""
+        "description":"Saves the text from any text window to a file."
     },
     "SCATTER":{
         "prefix":"SCATTER",
         "body":"SCATTER ${1|ON,OFF|}",
-        "description":""
+        "description":"Used to control whether sequential surface scattering is done while tracing rays."
     },
     "SETAIM":{
         "prefix":"SETAIM",
         "body":"SETAIM ${1:state}",
-        "description":"Set state of ray aiming function"
+        "description":"Set the state of the ray aiming function"
     },
     "SETAIMDATA":{
         "prefix":"SETAIMDATA",
         "body":"SETAIMDATA ${1:code}, ${2:value}",
-        "description":"Set data of ray aiming function"
+        "description":"Sets various data for the ray aiming function"
     },
     "SETCONFIG":{
         "prefix":"SETCONFIG",
         "body":"SETCONFIG ${1:config}",
-        "description":""
+        "description":"Sets the current configuration for multi-configuration (zoom) systems."
     },
     "SETDETECTOR":{
         "prefix":"SETDETECTOR",
         "body":"SETDETECTOR ${1:surf}, ${2:object}, ${3:pixel}, ${4:datatype}, ${5:value}",
-        "description":""
+        "description":"Sets the coherent or incoherent detector data for any pixel on a detector rectangle object."
     },
     "SETMCOPERAND":{
         "prefix":"SETMCOPERAND",
         "body":"SETMCOPERAND ${1:row}, ${2:config}, ${3:value}, ${4:datatype}",
-        "description":""
+        "description":"Sets any row or configuration of the Multi-Configuration Editor to any numeric value."
     },
     "SETNSCPARAMETER":{
         "prefix":"SETNSCPARAMETER",
         "body":"SETNSCPARAMETER ${1:surface}, ${2:object}, ${3:parameter}, ${4:value}",
-        "description":""
+        "description":"Sets the parameter values of any object in the NSC editor."
     },
     "SETNSCPOSITION":{
         "prefix":"SETNSCPOSITION",
         "body":"SETNSCPOSITION ${1:surface}, ${2:object}, ${3:code}, ${4:value}",
-        "description":""
+        "description":"Sets the x, y, z or tilt x, tilt y, tilt z position of any object in the NSC editor."
     },
     "SETNSCPROPERTY":{
         "prefix":"SETNSCPROPERTY",
         "body":"SETNSCPROPERTY ${1:surface}, ${2:object}, ${3:code}, ${4:face}, ${5:value}",
-        "description":""
+        "description":"Sets properties of NSC objects."
     },
     "SETOPERAND":{
         "prefix":"SETOPERAND",
         "body":"SETOPERAND ${1:row}, ${2:col}, ${3:value}",
-        "description":""
+        "description":"Sets any row or column of the Merit Function Editor to any numeric value."
     },
     "SETSURFACEPROPERTY":{
         "prefix":"SETSURFACEPROPERTY",
         "body":"SETSURFACEPROPERTY ${1:surface}, ${2:code}, ${3:value1}, ${4:value2}",
-        "description":""
+        "description":"Sets properties of surfaces."
     },
     "SETSYSTEMPROPERTY":{
         "prefix":"SETSYSTEMPROPERTY",
         "body":"SETSYSTEMPROPERTY ${1:code}, ${2:value1}, ${3:value2}",
-        "description":""
+        "description":"Sets properties of the system, such as system aperture, field, wavelength, and other data."
     },
     "SETTEXTSIZE":{
         "prefix":"SETTEXTSIZE",
         "body":"SETTEXTSIZE ${1:xsize}, ${2:ysize}",
-        "description":""
+        "description":"Changes the size of the characters drawn by the GTEXT command."
     },
     "SETTOL":{
         "prefix":"SETTOL",
         "body":"SETTOL ${1:row}, ${2:col}, ${3:data}",
-        "description":""
+        "description":"Sets the data in the various columns for any tolerance operand in the tolerance data editor."
     },
     "SETVAR":{
         "prefix":"SETVAR",
         "body":"SETVAR",
-        "description":""
+        "description":"Changes the state of variables for optimization."
     },
     "SETVECSIZE":{
         "prefix":"SETVECSIZE",
         "body":"SETVECSIZE ${1:n}",
-        "description":""
+        "description":"Changes the maximum size of the VEC1, VEC2, VEC3, and VEC4 arrays."
     },
     "SETVIG":{
         "prefix":"SETVIG",
         "body":"SETVIG",
-        "description":"Set vignetting factor"
+        "description":"Set the vignetting factors"
     },
     "SHOWBITMAP":{
         "prefix":"SHOWBITMAP",
         "body":"SHOWBITMAP ${1:filename}",
-        "description":""
+        "description":"Displays a BMP, JPG or PNG file in a viewer window."
     },
     "SHOWFILE":{
         "prefix":"SHOWFILE",
         "body":"SHOWFILE ${1:filename}, ${2:saveflag}",
-        "description":"Show text file"
+        "description":"Displays a text file to the screen using the OpticStudio file viewer."
+    },
+    "SOLVEBEFORESTOP":{
+        "prefix":"SOLVEBEFORESTOP",
+        "body":"SOLVEBEFORESTOP",
+        "description":"Enables ZPL solves to be placed on surfaces prior to the stop surface."
     },
     "SOLVERETURN":{
         "prefix":"SOLVERETURN",
         "body":"SOLVERETURN ${1:x}",
-        "description":""
+        "description":"Returns a computed solve value back to the editor calling the solve."
     },
     "SOLVETYPE":{
         "prefix":"SOLVETYPE",
         "body":"SOLVETYPE ${1:surf}, ${2:CODE}, ${3:arg1-4}",
-        "description":""
+        "description":"Changes the solve status on a given surface and value. "
     },
     "STOPSURF":{
         "prefix":"STOPSURF",
         "body":"STOPSURF ${1:surf}",
         "description":"Set stop position"
     },
+    "SUSPENDUPDATES":{
+        "prefix":"SUSPENDUPDATES",
+        "body":"SUSPENDUPDATES",
+        "description":"Prevents any UI editor windows from being updated by ZPL commands while suspended."
+    },
     "TESTPLATEFIT":{
         "prefix":"TESTPLATEFIT",
         "body":"TESTPLATEFIT ${1:tpd_file}, ${2:log_file}, ${3:method}, ${4:number_cycles}",
-        "description":""
+        "description":"Calls the test plate fitting routine."
     },
     "TIMER":{
         "prefix":"TIMER",
         "body":"TIMER",
-        "description":""
+        "description":"Resets the internal clock."
+    },
+    "TOLERANCE":{
+        "prefix":"TOLERANCE",
+        "body":"TOLERANCE ${1:topfile}, ${2:outfile}",
+        "description":"Runs a tolerance analysis and saves the tolerance report to a text file."
     },
     "UNLOCKWINDOW":{
         "prefix":"UNLOCKWINDOW",
         "body":"UNLOCKWINDOW ${1:winnum}",
-        "description":""
+        "description":"Unlocks any one or all locked windows."
     },
     "UPDATE":{
         "prefix":"UPDATE",
         "body":"UPDATE",
-        "description":""
+        "description":"Updates data required for both sequential and non-sequential ray tracing."
     },
     "XDIFFIA":{
         "prefix":"XDIFFIA",
         "body":"XDIFFIA ${1:outfile}, ${2:infile}",
-        "description":""
+        "description":"Computes the Extended Diffraction Image Analysis feature and saves the result to a ZBF file. "
+    },
+    "ZBF2MAT":{
+        "prefix":"ZBF2MAT",
+        "body":"ZBF2MAT ${1:zbffile}, ${2:matfile}, ${3:surfacerange}, ${4:int1}, ${5:int2}",
+        "description":"Converts a ZBF file to a Matlab MAT file."
     },
     "ZBFCLR":{
         "prefix":"ZBFCLR",
         "body":"ZBFCLR ${1:filename}",
-        "description":"Clear comples amplitude in ZBF"
+        "description":"Clears the complex amplitude data in a ZBF file."
     },
     "ZBFMULT":{
         "prefix":"ZBFMULT",
         "body":"ZBFMULT ${1:filename}, ${2:Ax}, ${3:Bx}, ${4:Ay}, ${5:By}",
-        "description":""
+        "description":"Multiplies the complex amplitude data in a ZBF file by a complex factor."
     },
     "ZBFPROPERTIES":{
         "prefix":"ZBFPROPERTIES",
         "body":"ZBFPROPERTIES ${1:filename}, ${2:vector}",
-        "description":""
+        "description":"Opens the specified ZBF file and places various data about the beam in a vector variable."
     },
     "ZBFREAD":{
         "prefix":"ZBFREAD",
         "body":"ZBFREAD ${1:file}, ${2:beam}, ${3:property}",
-        "description":""
+        "description":"Opens the specified ZBF file and places the electric field and beam property data in two user- defined array variables."
     },
     "ZBFRESAMPLE":{
         "prefix":"ZBFRESAMPLE",
         "body":"ZBFRESAMPLE ${1:filename}, ${2:nx}, ${3:ny}, ${4:wx}, ${5:wy}, ${6:decenterx}, ${7:decentery}",
-        "description":"Resample ZBF"
+        "description":"Resamples a ZBF file to a new width and point spacing."
     },
     "ZBFSHOW":{
         "prefix":"ZBFSHOW",
         "body":"ZBFSHOW ${1:filename}",
-        "description":""
+        "description":"Displays a ZBF file in a viewer window."
     },
     "ZBFSUM":{
         "prefix":"ZBFSUM",
         "body":"ZBFSUM ${1:coherent}, ${2:filename1}, ${3:filename2}, ${4:outfilename}",
-        "description":""
+        "description":"Sums either coherently or incoherently the data in two ZBF files and places the resulting data in a third ZBF file."
     },
     "ZBFTILT":{
         "prefix":"ZBFTILT",
         "body":"ZBFTILT ${1:filename}, ${2:cx}, ${3:cy}, ${4:tx}, ${5:ty}",
-        "description":""
+        "description":"Multiplies the data in a ZBF file by a complex phase factor to introduce phase tilt to the beam."
     },
     "ZBFWRITE":{
         "prefix":"ZBFWRITE",
         "body":"ZBFWRITE ${1:file}, ${2:beam}, ${3:property}",
-        "description":""
+        "description":"Writes electric field and beam property data arrays to a ZBF file."
+    },
+    "ZRD2MAT":{
+        "prefix":"ZRD2MAT",
+        "body":"ZRD2MAT ${1:zrdfile}, ${2:matfile}, ${3:savesegment}, ${4:int1}, ${5:int2}",
+        "description":"Converts a ZRD file to a Matlab MAT file."
+    },
+    "ZRDAPPEND":{
+        "prefix":"ZRDAPPEND",
+        "body":"ZRDAPPEND ${1:infile}, ${2:outfile}",
+        "description":"Appends data from one ZRD file onto the end of a second file. "
     },
     "ZRDFILTER":{
         "prefix":"ZRDFILTER",
         "body":"ZRDFILTER ${1:infile}, ${2:outfile}, ${3:filter}",
-        "description":""
+        "description":"Opens a ZRD ray database file, applies a filter, and saves the filtered subset of rays to a new ZRD file."
+    },
+    "ZRDPLAYBACK":{
+        "prefix": "ZRDPLAYBACK",
+        "body":"ZRDPLAYBACK ${1:zrdfilename}, ${2:surface}, ${3:detector}, ${4:clear}, ${5: filtering}",
+        "description":"This keyword reads a ZRD file, and adds ray amplitude data to one or all detectors."
     },
     "ZRDSAVERAYS":{
         "prefix":"ZRDSAVERAYS",
         "body":"ZRDSAVERAYS ${1:infile}, ${2:outfile}, ${3:filter}, ${4:object}",
-        "description":""
+        "description":"Opens a ZRD ray database file, applies a filter, and saves the rays in the filtered subset that intersect a specified object number."
     },
     "ZRDSUM":{
         "prefix":"ZRDSUM",
         "body":"ZRDSUM ${1:infile1}, ${2:infile2}, ${3:outfile}",
-        "description":"Connect two ZRD"
+        "description":"Concatenates two ZRD files into a third file."
     }
     
 }
