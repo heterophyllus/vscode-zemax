@@ -4,6 +4,10 @@ All notable changes to the "vscode-zemax" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.1]
+- Divide keywords into alphabetical groups
+- Small fixes
+
 ## [0.4.0]
 - Update snippets
 
