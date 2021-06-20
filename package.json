@@ -2,7 +2,7 @@
     "name": "vscode-zemax",
     "displayName": "Zemax OpticStudio",
     "description": "Zemax OpticStudio ZPL language support for Visual Studio Code",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/heterophyllus/vscode-zemax.git"
@@ -10,7 +10,7 @@
     "license": "MIT",
     "publisher": "heterophyllus",
     "author": {
-        "name":"Hiiragi",
+        "name": "Hiiragi",
         "email": "heterophyllus.work@gmail.com"
     },
     "icon": "images/icon.jpg",
