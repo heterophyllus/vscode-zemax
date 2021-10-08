@@ -1,0 +1,279 @@
+{
+    "comment": "Syntax setting for Zemax .zmx file. At the moment, any four-letter word at the beginning of a sentence is recognized as a keyword",
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Zemax(.zmx)",
+    "scopeName": "source.zemax-zmx",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+        },
+        {
+			"include": "#keywords"
+		}
+    ],
+    "repository": {
+        "comments":{
+            "patterns": [
+                
+                {
+                    "match": "^\\s*((?i)BLNK)\\s+.*$",
+					"captures":{
+						"0":{
+							"name": "comment.line.zemax"
+						},
+						"1":{
+							"name": "keyword.comment.zemax"
+						}
+					}
+                }
+            ]
+        },
+        "numbers":{
+			"patterns":[
+				{
+					"match": "(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE][-+]?\\d+)?|\\.\\d+([eE][-+]?\\d+)?",
+					"name": "constant.numeric.zemax"
+				}
+			]
+		},
+		"strings":{
+			"patterns":[
+				{
+					"begin": "'",
+					"end": "'",
+					"name": "string.quoted.single.zemax"
+				},
+				{
+					"begin": "\"",
+					"end": "\"",
+					"name": "string.quoted.double.zemax"
+                },
+                {
+                    "comment": "filename",
+                    "match": "\\b([a-zA-Z0-9_\\-]+\\.[a-zA-Z]{2,3})\\b",
+                    "name" : "string.filename.zemax"
+                }
+			]
+        },
+        "keywords" :{
+            "patterns": [
+                {
+                    "comment": "MODE",
+                    "match": "^\\s*((?i)MODE)\\s+(\\w+)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+					"comment": "NAME",
+					"match": "^\\s*((?i)NAME)\\s+(.*$)",
+					"captures": {
+						"1":{
+							"name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "string.filename.zemax"
+                        }
+					}
+                },
+                {
+                    "comment": "NOTE",
+                    "match": "^\\s*((?i)NOTE)\\s+([0-9]{1,2})\\s+(.*$)",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "constant.numeric.zemax"
+                        },
+                        "3":{
+                            "name": "comment.other.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "UNIT",
+                    "match": "^\\s*((?i)UNIT)\\b(.*)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "GCAT",
+                    "match": "^\\s*((?i)GCAT)\\b(.*)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "string.filename.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "COFN",
+                    "match": "^\\s*((?i)COFN)\\s+([a-zA-Z]+)\\s",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "SURF",
+                    "match": "^\\s*((?i)SURF)\\b",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.control.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "COMM",
+                    "match": "^\\s*((?i)COMM)\\s+(.*)$",
+					"captures":{
+						"1":{
+							"name": "keyword.language.zemax"
+						},
+						"2":{
+							"name": "string.other.zemax"
+						}
+					}
+                },
+                {
+                    "comment": "TYPE",
+                    "match": "^\\s*((?i)TYPE)\\b(.*$)",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "GLAS",
+                    "match": "^\\s*((?i)GLAS)\\s+([a-zA-Z0-9-]+)\\b",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "string.other.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "COAT",
+                    "match": "^\\s*((?i)COAT)\\s+(\\w+)\\b",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "string.other.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "INFINITY",
+                    "match": "\\b((?i)INFINITY)\\b",
+                    "name": "constant.numeric.zemax"
+                },
+                {
+                    "comment": "NONE",
+                    "match": "\\b(\\_NONE\\_)\\b",
+                    "name": "support.type.zemax"
+                },
+                {
+                    "comment": "NSOH",
+                    "match": "^\\s*((?i)NSOH)\\s+(\\w+)\\s+(\\d+)\\s+(\\d+)\\s+(.*)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        },
+                        "3":{
+                            "name": "constant.numeric.zemax"
+                        },
+                        "4":{
+                            "name": "constant.numeric.zemax"
+                        },
+                        "5":{
+                            "name": "string.other.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "NSCS",
+                    "match": "^\\s*((?i)NSCS)\\s+(\\d+)\\s+(\\d+)\\s+(\\w+)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "constant.numeric.zemax"
+                        },
+                        "3":{
+                            "name": "constant.numeric.zemax"
+                        },
+                        "4": {
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "TOL",
+                    "match": "^\\s*((?i)TOL)\\s+([a-zA-Z]+)\\b",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "support.type.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "TCMM",
+                    "match": "^\\s*((?i)TCMM)\\s+(.*)$",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.language.zemax"
+                        },
+                        "2":{
+                            "name": "comment.other.zemax"
+                        }
+                    }
+                },
+                {
+                    "comment": "other remaining keywords",
+                    "match": "^\\s*([a-zA-Z]{4})\\b",
+                    "name": "keyword.language.zemax"
+                }
+            ]
+        }
+    }
+}

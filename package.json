@@ -2,7 +2,7 @@
     "name": "vscode-zemax",
     "displayName": "Zemax OpticStudio",
     "description": "Zemax OpticStudio ZPL language support for Visual Studio Code",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/heterophyllus/vscode-zemax.git"
@@ -40,6 +40,18 @@
                     ".ZPL"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "zemax-zmx",
+                "aliases": [
+                    "Zemax",
+                    "zemax"
+                ],
+                "extensions": [
+                    ".zmx",
+                    ".ZMX"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -47,6 +59,11 @@
                 "language": "zemax",
                 "scopeName": "source.zemax",
                 "path": "./syntaxes/zemax.tmLanguage.json"
+            },
+            {
+                "language": "zemax-zmx",
+                "scopeName": "source.zemax-zmx",
+                "path": "./syntaxes/zemax-zmx.tmLanguage.json"
             }
         ],
         "snippets": [
